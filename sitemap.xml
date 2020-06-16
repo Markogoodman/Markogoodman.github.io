@@ -3,13 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://markogoodman.github.io/about/</loc>
-    <lastmod>2020-06-13T22:46:49+08:00</lastmod>
+    <loc>https://markogoodman.github.io/categories/</loc>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/database/</loc>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/index/</loc>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://markogoodman.github.io/</loc>
-    <lastmod>2020-06-13T22:46:37+08:00</lastmod>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/mongodb/</loc>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/mongodb-partial-sparse-index/</loc>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/</loc>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/</loc>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/archive/</loc>
+    <lastmod>2020-06-14T02:11:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/about/</loc>
+    <lastmod>2020-06-13T22:46:49+08:00</lastmod>
   </url>
   
   <url>
@@ -18,20 +63,7 @@
   </url>
   
   <url>
-    <loc>https://markogoodman.github.io/posts/</loc>
-    <lastmod>2020-06-13T22:46:37+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/categories/</loc>
-  </url>
-  
-  <url>
     <loc>https://markogoodman.github.io/series/</loc>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/tags/</loc>
   </url>
   
 </urlset>
