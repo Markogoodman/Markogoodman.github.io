@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Go on Marko</title>
-    <link>https://markogoodman.github.io/tags/go/</link>
-    <description>Recent content in Go on Marko</description>
+    <title>map on Marko</title>
+    <link>https://markogoodman.github.io/tags/map/</link>
+    <description>Recent content in map on Marko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>©{2020}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 17 Jul 2020 23:19:11 +0800</lastBuildDate>
     
-        <atom:link href="https://markogoodman.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://markogoodman.github.io/tags/map/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -57,50 +57,6 @@
             
           
         
-        
-      </item>
-      
-      <item>
-        <title>Goroutine 為啥那麼快 (Scheduling in Go) Part I</title>
-        <link>https://markogoodman.github.io/posts/scheduling-in-go-part-i/</link>
-        <pubDate>Sat, 11 Jul 2020 00:16:33 +0800</pubDate>
-        <author>marko958m@gmail.com (Marko Peng)</author>
-        <atom:modified>Sat, 11 Jul 2020 00:16:33 +0800</atom:modified>
-        <guid>https://markogoodman.github.io/posts/scheduling-in-go-part-i/</guid>
-        <description>關於這系列文 之前看了 Ardan labs 寫的下面這個系列文還滿不錯的 https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part1.html 主要是在講 Goroutine 和一般我們看到的 thread 比起來到底厲害在哪裡，也舉了一些範例讓讀者知道 Goroutine 用在哪裡</description>
-        
-        <dc:creator>Marko Peng</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Go</category>
-            
-          
-            
-              <category>Goroutine</category>
-            
-          
-            
-              <category>scheduler</category>
-            
-          
-        
-        
-          
-            
-              <category>程式</category>
-            
-          
-        
-        
-          
-            
-              <category>Scheduling in Go</category>
-            
-          
         
       </item>
       

@@ -14,7 +14,7 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 11 Jul 2020 00:16:33 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2020 23:19:11 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -25,7 +25,7 @@
       <item>
         <title>Go</title>
         <link>https://markogoodman.github.io/tags/go/</link>
-        <pubDate>Sat, 11 Jul 2020 00:16:33 +0800</pubDate>
+        <pubDate>Fri, 17 Jul 2020 23:19:11 +0800</pubDate>
         <author>marko958m@gmail.com (Marko Peng)</author>
         
         <guid>https://markogoodman.github.io/tags/go/</guid>
@@ -41,7 +41,43 @@
       </item>
       
       <item>
-        <title>goroutine</title>
+        <title>map</title>
+        <link>https://markogoodman.github.io/tags/map/</link>
+        <pubDate>Fri, 17 Jul 2020 23:19:11 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/map/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>pointer</title>
+        <link>https://markogoodman.github.io/tags/pointer/</link>
+        <pubDate>Fri, 17 Jul 2020 23:19:11 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/pointer/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Goroutine</title>
         <link>https://markogoodman.github.io/tags/goroutine/</link>
         <pubDate>Sat, 11 Jul 2020 00:16:33 +0800</pubDate>
         <author>marko958m@gmail.com (Marko Peng)</author>

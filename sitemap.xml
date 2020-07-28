@@ -4,12 +4,47 @@
   
   <url>
     <loc>https://markogoodman.github.io/categories/</loc>
-    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://markogoodman.github.io/tags/go/</loc>
-    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/go-map/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/map/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/pointer/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
   </url>
   
   <url>
@@ -19,16 +54,6 @@
   
   <url>
     <loc>https://markogoodman.github.io/posts/scheduling-in-go-part-i/</loc>
-    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/</loc>
-    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/</loc>
     <lastmod>2020-07-11T00:16:33+08:00</lastmod>
   </url>
   
@@ -44,16 +69,6 @@
   
   <url>
     <loc>https://markogoodman.github.io/series/</loc>
-    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/tags/</loc>
-    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
     <lastmod>2020-07-11T00:16:33+08:00</lastmod>
   </url>
   
