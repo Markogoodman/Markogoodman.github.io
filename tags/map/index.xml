@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>map on Marko</title>
+    <link>https://markogoodman.github.io/tags/map/</link>
+    <description>Recent content in map on Marko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
+    <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
+    <copyright>©{2020}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 17 Jul 2020 23:19:11 +0800</lastBuildDate>
+    
+        <atom:link href="https://markogoodman.github.io/tags/map/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Go 的 MAP 要不要用指標</title>
+        <link>https://markogoodman.github.io/posts/go-map/</link>
+        <pubDate>Fri, 17 Jul 2020 23:19:11 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Fri, 17 Jul 2020 23:19:11 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/go-map/</guid>
+        <description>一開始用 Go 的 Map 時常常搞不清楚到底要不要傳指標，好像大部分的時候都不用，但用到 unmarshal 之類的 function 就又要傳指標進去了。 這篇就來研究一下 Go 的 Map 到底是什麼生</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Go</category>
+            
+          
+            
+              <category>map</category>
+            
+          
+            
+              <category>pointer</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

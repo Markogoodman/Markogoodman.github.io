@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>mongodb on Marko</title>
+    <link>https://markogoodman.github.io/tags/mongodb/</link>
+    <description>Recent content in mongodb on Marko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
+    <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
+    <copyright>©{2020}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 14 Jun 2020 02:19:55 +0800</lastBuildDate>
+    
+        <atom:link href="https://markogoodman.github.io/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Mongodb Partial and Sparse Index</title>
+        <link>https://markogoodman.github.io/posts/mongodb-partial-sparse-index/</link>
+        <pubDate>Sun, 14 Jun 2020 02:19:55 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sun, 14 Jun 2020 02:19:55 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/mongodb-partial-sparse-index/</guid>
+        <description>前幾天幫原本已經有資料的 collection 新建 unique index 的時候讓 Server 啟動爆掉了記錄一下 1 2 3 db.coll.insert({&amp;#34;a&amp;#34;:1}) db.coll.insert({&amp;#34;a&amp;#34;:2}) db.coll.createIndex({&amp;#34;b&amp;#34;:1}, {unique: true}) // duplicate key error 在一個之前資料都沒有的 field 上建 unique index，結果噴出了下</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mongodb</category>
+            
+          
+            
+              <category>index</category>
+            
+          
+            
+              <category>database</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
