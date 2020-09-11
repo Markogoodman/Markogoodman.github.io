@@ -4,11 +4,16 @@
   
   <url>
     <loc>https://markogoodman.github.io/categories/</loc>
+<<<<<<< HEAD
     <lastmod>2020-09-12T00:54:03+08:00</lastmod>
+=======
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+>>>>>>> 158ce2ee1677783ede18224af0092a7371d26cd6
   </url>
   
   <url>
     <loc>https://markogoodman.github.io/tags/go/</loc>
+<<<<<<< HEAD
     <lastmod>2020-09-12T00:54:03+08:00</lastmod>
   </url>
   
@@ -69,6 +74,68 @@
   
   <url>
     <loc>https://markogoodman.github.io/posts/scheduling-in-go-part-i/</loc>
+=======
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/go-map/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/map/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/pointer/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2020-07-17T23:19:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/goroutine/</loc>
+    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/scheduling-in-go-part-i/</loc>
+    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/scheduler/</loc>
+    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/series/scheduling-in-go/</loc>
+    <lastmod>2020-07-11T00:16:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/series/</loc>
+>>>>>>> 158ce2ee1677783ede18224af0092a7371d26cd6
     <lastmod>2020-07-11T00:16:33+08:00</lastmod>
   </url>
   
@@ -103,11 +170,14 @@
   </url>
   
   <url>
+<<<<<<< HEAD
     <loc>https://markogoodman.github.io/</loc>
     <lastmod>2020-06-13T22:46:49+08:00</lastmod>
   </url>
   
   <url>
+=======
+>>>>>>> 158ce2ee1677783ede18224af0092a7371d26cd6
     <loc>https://markogoodman.github.io/posts/my-first-post/</loc>
     <lastmod>2020-06-13T22:46:37+08:00</lastmod>
   </url>
