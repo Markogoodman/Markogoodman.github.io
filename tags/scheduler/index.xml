@@ -14,11 +14,7 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-<<<<<<< HEAD
     <lastBuildDate>Sat, 12 Sep 2020 00:54:03 +0800</lastBuildDate>
-=======
-    <lastBuildDate>Sat, 11 Jul 2020 00:16:33 +0800</lastBuildDate>
->>>>>>> 158ce2ee1677783ede18224af0092a7371d26cd6
     
         <atom:link href="https://markogoodman.github.io/tags/scheduler/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,7 +23,6 @@
 
       
       <item>
-<<<<<<< HEAD
         <title>Scheduling in Go Part II</title>
         <link>https://markogoodman.github.io/posts/scheduling-in-go-part-ii/</link>
         <pubDate>Sat, 12 Sep 2020 00:54:03 +0800</pubDate>
@@ -72,8 +67,6 @@
       </item>
       
       <item>
-=======
->>>>>>> 158ce2ee1677783ede18224af0092a7371d26cd6
         <title>Goroutine 為啥那麼快 (Scheduling in Go) Part I</title>
         <link>https://markogoodman.github.io/posts/scheduling-in-go-part-i/</link>
         <pubDate>Sat, 11 Jul 2020 00:16:33 +0800</pubDate>
