@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Categories on Marko</title>
-    <link>https://markogoodman.github.io/categories/</link>
-    <description>Recent content in Categories on Marko</description>
+    <title>csrf on Marko</title>
+    <link>https://markogoodman.github.io/tags/csrf/</link>
+    <description>Recent content in csrf on Marko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
@@ -16,26 +16,38 @@
     <copyright>©{2020}, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 17 Oct 2020 15:05:29 +0800</lastBuildDate>
     
-        <atom:link href="https://markogoodman.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://markogoodman.github.io/tags/csrf/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
-        <title>程式</title>
-        <link>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</link>
+        <title>Csrf</title>
+        <link>https://markogoodman.github.io/posts/csrf/</link>
         <pubDate>Sat, 17 Oct 2020 15:05:29 +0800</pubDate>
         <author>marko958m@gmail.com (Marko Peng)</author>
-        
-        <guid>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</guid>
-        <description></description>
+        <atom:modified>Sat, 17 Oct 2020 15:05:29 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/csrf/</guid>
+        <description>筆記一下研究 csrf 查到的資料，有些小地方網路上的資料都滿模糊的真的查有夠久 XD CSRF (Cross-site request forgery) 基本原理 基本原理就是使用者在某個 A 網站認證(登入帳號之類的)</description>
         
         <dc:creator>Marko Peng</dc:creator>
         
         
         
         
+          
+            
+              <category>csrf</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
         
         
       </item>

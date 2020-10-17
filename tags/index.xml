@@ -14,7 +14,7 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 12 Sep 2020 00:54:03 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2020 15:05:29 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,9 +23,27 @@
 
       
       <item>
+        <title>csrf</title>
+        <link>https://markogoodman.github.io/tags/csrf/</link>
+        <pubDate>Sat, 17 Oct 2020 15:05:29 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/csrf/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Go</title>
         <link>https://markogoodman.github.io/tags/go/</link>
-        <pubDate>Sat, 12 Sep 2020 00:54:03 +0800</pubDate>
+        <pubDate>Sat, 19 Sep 2020 21:41:43 +0800</pubDate>
         <author>marko958m@gmail.com (Marko Peng)</author>
         
         <guid>https://markogoodman.github.io/tags/go/</guid>
@@ -43,7 +61,7 @@
       <item>
         <title>Goroutine</title>
         <link>https://markogoodman.github.io/tags/goroutine/</link>
-        <pubDate>Sat, 12 Sep 2020 00:54:03 +0800</pubDate>
+        <pubDate>Sat, 19 Sep 2020 21:41:43 +0800</pubDate>
         <author>marko958m@gmail.com (Marko Peng)</author>
         
         <guid>https://markogoodman.github.io/tags/goroutine/</guid>
@@ -61,7 +79,7 @@
       <item>
         <title>scheduler</title>
         <link>https://markogoodman.github.io/tags/scheduler/</link>
-        <pubDate>Sat, 12 Sep 2020 00:54:03 +0800</pubDate>
+        <pubDate>Sat, 19 Sep 2020 21:41:43 +0800</pubDate>
         <author>marko958m@gmail.com (Marko Peng)</author>
         
         <guid>https://markogoodman.github.io/tags/scheduler/</guid>
