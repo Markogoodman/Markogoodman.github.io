@@ -14,13 +14,51 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 19 Sep 2020 21:41:43 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Dec 2020 22:35:13 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>垃圾回收！</title>
+        <link>https://markogoodman.github.io/posts/gc/</link>
+        <pubDate>Wed, 16 Dec 2020 22:35:13 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Wed, 16 Dec 2020 22:35:13 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/gc/</guid>
+        <description>tags: Golang 垃圾回收～～～ 追蹤heap裡面的mem 刪除沒在用的 保留有在用的 主要有分兩大類 一. Reference counting 每個 obj 記住自己有被多少人連結到，歸零的時候順便回收 例</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Go</category>
+            
+          
+            
+              <category>Garbage collection</category>
+            
+          
+            
+              <category>垃圾回收</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Scheduling in Go Part III</title>

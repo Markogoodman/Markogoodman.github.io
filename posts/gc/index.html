@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Csrf – Marko</title>
+    <title>垃圾回收！ – Marko</title>
     
 
 
@@ -556,7 +556,7 @@
     
     var baseurl = JSON.parse("\"https://markogoodman.github.io/\"");
     
-    var permalink = JSON.parse("\"https://markogoodman.github.io/posts/csrf/\"");
+    var permalink = JSON.parse("\"https://markogoodman.github.io/posts/gc/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -1212,23 +1212,23 @@
 
 
     
-<meta name="description" content="筆記一下 csrf" />
+<meta name="description" content="讀垃圾回收的筆記，懶的整理RR" />
 
 
-<meta name="keywords" content="csrf">
+<meta name="keywords" content="Go,Garbage collection,垃圾回收">
 
-<meta name="created" content="2020-10-17T15:05:29&#43;0800">
-<meta name="modified" content="2020-10-17T15:05:29&#43;0800">
-<meta property="article:published_time" content="2020-10-17T15:05:29&#43;0800">
+<meta name="created" content="2020-12-16T22:35:13&#43;0800">
+<meta name="modified" content="2020-12-16T22:35:13&#43;0800">
+<meta property="article:published_time" content="2020-12-16T22:35:13&#43;0800">
 
 <meta name="author" content="Marko Peng">
 
 
 <meta property="og:site_name" content="Marko">
-<meta property="og:title" content="Csrf">
-<meta property="og:url" content="https://markogoodman.github.io/posts/csrf/">
+<meta property="og:title" content="垃圾回收！">
+<meta property="og:url" content="https://markogoodman.github.io/posts/gc/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="筆記一下 csrf">
+<meta property="og:description" content="讀垃圾回收的筆記，懶的整理RR">
 
 <meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1239,7 +1239,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://markogoodman.github.io/posts/csrf/">
+<link rel="canonical" href="https://markogoodman.github.io/posts/gc/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1253,12 +1253,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Csrf",
-    "datePublished": "2020-10-17T15:05:29+08:00",
-    "dateModified": "2020-10-17T15:05:29+08:00",
-    "url" : "https://markogoodman.github.io/posts/csrf/",
-    "description": "筆記一下 csrf",
-    "keywords": ["csrf"],
+    "headline": "垃圾回收！",
+    "datePublished": "2020-12-16T22:35:13+08:00",
+    "dateModified": "2020-12-16T22:35:13+08:00",
+    "url" : "https://markogoodman.github.io/posts/gc/",
+    "description": "讀垃圾回收的筆記，懶的整理RR",
+    "keywords": ["Go","Garbage collection","垃圾回收"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://markogoodman.github.io/"
@@ -1526,7 +1526,7 @@
   
   <li  class="is-active" >
     
-      <span>Csrf</span>
+      <span>垃圾回收！</span>
     
   </li>
   
@@ -1538,13 +1538,13 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Csrf</h2>
+    <h2 class="single__title" data-ani="true">垃圾回收！</h2>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Oct 17, 2020 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Dec 16, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;7&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1556,60 +1556,231 @@
   🏷️
   
 
-  <li><a href="https://markogoodman.github.io/tags/csrf/" class="single__tag" title="csrf">#csrf</a></li>
+  <li><a href="https://markogoodman.github.io/tags/garbage-collection/" class="single__tag" title="Garbage collection">#Garbage collection</a></li>
+
+  <li><a href="https://markogoodman.github.io/tags/go/" class="single__tag" title="Go">#Go</a></li>
+
+  <li><a href="https://markogoodman.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/" class="single__tag" title="垃圾回收">#垃圾回收</a></li>
 
 </ul>
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>筆記一下研究 csrf 查到的資料，有些小地方網路上的資料都滿模糊的真的查有夠久 XD</p>
-<h2 id="csrf-cross-site-request-forgery-基本原理">CSRF (Cross-site request forgery) 基本原理</h2>
-<p>基本原理就是使用者在某個 A 網站認證(登入帳號之類的)後瀏覽器把 cookie 存下來，攻擊者利用發送 request 會自動帶上 cookie 的這個動作來讓使用者誤發一些奇怪的 request 去某 A 網站。</p>
-<p>舉個簡單的範例<br />
-像是一個網站 XXX 提供 API 可以刪除文章<br />
-<code>/posts/delete?id=12</code><br />
-但需要使用者用帳號密碼登入後，打這個 API 時在 cookie 中帶著上 session id 才可以刪除</p>
-<p>那壞壞的網站可能會有這樣的東西<br />
-<code>&lt;a href='http://XXX/posts/delete?id=12'&gt;hi&lt;/a&gt;</code><br />
-如果你之前登入過XXX網站，而且該網站又沒有做好防護，點下去文章就會被砍掉拉</p>
-<p>注意的是攻擊者看不到 cookie 的內容，只是讓受害者無意間使用了。</p>
-<p>網路上有更詳細的介紹這邊就不多講，總之攻擊的方式五花八門，不管是換成POST，或是後端只收 json 之類的方法都是有辦法破解 (但我不會</p>
-<p>這篇主要想記錄一些比較常用的防禦方法的運作</p>
-<h3 id="圖形驗證碼或簡訊密碼">圖形驗證碼或簡訊密碼</h3>
-<p>很多比較敏感的操作都會要求這些，因為這類的攻擊無法得到驗證碼資訊所以防禦成功<br />
-但對使用者來說這是一個麻煩</p>
-<h3 id="samesite-cookie">Samesite cookie</h3>
-<p>是一種設定 http cookie 可以設定的屬性<br />
-長得像這樣<br />
-<code>Set-Cookie: session_id=123; SameSite=Strict</code></p>
-<p>基本上可以去設定瀏覽器在跨站的 request 是否會自動帶 cookie。<br />
-設定成不會自動帶的時候就防住了 csrf</p>
-<p>詳細請參考下面連結，裡面有說明了怎樣算是跨站以及不同 SameSite 設定的影響<br />
-<a href="https://medium.com/@azure820529/chrome-80-%E5%BE%8C%E9%87%9D%E5%B0%8D%E7%AC%AC%E4%B8%89%E6%96%B9-cookie-%E7%9A%84%E8%A6%8F%E5%89%87%E8%AA%BF%E6%95%B4-default-samesite-lax-aaba0bc785a3">https://medium.com/@azure820529/chrome-80-%E5%BE%8C%E9%87%9D%E5%B0%8D%E7%AC%AC%E4%B8%89%E6%96%B9-cookie-%E7%9A%84%E8%A6%8F%E5%89%87%E8%AA%BF%E6%95%B4-default-samesite-lax-aaba0bc785a3</a></p>
-<p>目前很多東西都是前後端分離架在不同地方，這些都是跨站的 request。</p>
-<p>因為 samesite 和 same-origin policy 名字太像了我就順便看了一下同源政策，結果根本是不同的東東。<br />
-同源政策是瀏覽器上的功能，主要做的是 cross-origin 發出請求後，收到回應時瀏覽器會看看同源政策的設定是否 OK，不 OK 的話會把回應擋掉。<br />
-不過實際上 request 還是有發出去，所以要是像前面那種攻擊例子也擋不住<br />
-詳細請參考：https://blog.techbridge.cc/2017/05/20/api-ajax-cors-and-jsonp/<br />
-還有J個 youtube.com/watch?v=KaEj_qZgiKY&amp;ab_channel=LiveOverflow</p>
-<h3 id="synchronizer-token-pattern">Synchronizer Token Pattern</h3>
-<p>因為 Samesite cookie 不是每個瀏覽器都支援<br />
-我們還是需要別的方法來判別送 req 的到底是不是使用者</p>
-<p>Synchronizer Token Pattern 就是當瀏覽器跟 server 要網頁的時候，server 偷偷在表單中塞一個隨機產生且隱藏的 csrf token，並自己存一份。server 收到 request 時會比對自己存的與收到的是否相同。<br />
-詳細請參考：https://medium.com/cross-site-request-forgery-csrf/synchronizer-token-pattern-63871b4c83ad</p>
-<p>提一下如果沒有同源政策弄好，受害者在惡意網站發了 request，惡意網站可以看到回來的 response，csrf token 就被看到嚕</p>
-<p>前後端分離的狀況下可能要把同源政策設好，只讓合法前端看到 token，前端再送 req 時順便帶上</p>
-<h3 id="double-submit-cookie">double submit cookie</h3>
-<p>這個東西是我查比較久才搞清楚的</p>
-<p>運作流程是<br />
-server 把 csrf token 設到瀏覽器的 cookie 內，瀏覽器在送 request 時可以把這個 token 從 cookie 拿出來，放到 header (或是 form 裡面都可以) 裡面一起送給 server。<br />
-這時進行了 csrf 攻擊，這個攻擊 request 其實還是會帶著 cookie 的 (如果沒設 samesite 的話拉)，但 csrf 攻擊者是看不到 cookie 的，自然也就不知道要放什麼 token 到 header 裡面，認證失敗。</p>
-<p>詳細：https://medium.com/cross-site-request-forgery-csrf/double-submit-cookie-pattern-65bb71d80d9f</p>
-<p>還有其他的變形像是讓前端自己產生 token 放到 cookie 裡面也行 (送req時放到 header 一起帶去 server)<br />
-總之只要攻擊者無法讀到 cookie，他就無法在 header 放入一樣的東西</p>
-<p>這種方法 server 不用存 token</p>
-<p>前後端分離且在完全不同網域的情況下，把 token 從 cookie 拿出來這段可能會有困難，或許可以在第一次收到 token 時就存在 local storage 之類的地方，但也感覺很容易被盜</p>
-<p>差不多寫完了，我也不知道為啥我沒在寫網頁還研究這個</p>
+      <h6 id="tags-golang">tags: <code>Golang</code></h6>
+<h1 id="垃圾回收">垃圾回收～～～</h1>
+<ol>
+<li>追蹤heap裡面的mem</li>
+<li>刪除沒在用的</li>
+<li>保留有在用的</li>
+</ol>
+<p>主要有分兩大類<br />
+一. Reference counting<br />
+每個 obj 記住自己有被多少人連結到，歸零的時候順便回收<br />
+例如：</p>
+<pre><code class="language-python=" data-lang="python=">a = Person(&quot;A&quot;)     // new 一個 Person 的 instance，這個 instance 的 ref count = 1
+b = a       // b 也去指相同的東西 ref count 再 +1
+b = None    // ref count -1
+a = None    // ref count -1 變成 0，記憶體釋放
+</code></pre><br>
+<p>問題：<br />
+circular references</p>
+<pre><code class="language-python=" data-lang="python=">a = Person(&quot;A&quot;)
+b = Person(&quot;B&quot;)
+a.friend = b
+b.friend = a
+a = None
+b = None
+</code></pre><p>雖然已經沒有任何變數直接指到新建的兩個 instance，，但實際上兩個 instance 還是互相 reference，讓 ref count 不會歸零。<br />
+所以只看 ref count 來回收還是有可能 memory leak<br />
+<a href="https://zhuanlan.zhihu.com/p/101781276">https://zhuanlan.zhihu.com/p/101781276</a><br />
+主要有兩種解決法</p>
+<ol>
+<li>
+<p>讓寫程式的人處理<br />
+譬如在 <code>a.friend = b</code> 時，指定這個是 weak pointer，讓它不列入 ref count 的計算。<br />
+好處是程式語言除了 reference counting 就不用做其他事了<br />
+壞處是碼農們沒寫好還是會 mem leak</p>
+</li>
+<li>
+<p>讓電腦做<br />
+加入一些 tracing GC 來輔助處理這些 circular references 的問題<br />
+下面會再講這是啥～<br />
+好壞處就和上面相反</p>
+</li>
+</ol>
+<p>總結計數的方法</p>
+<p>優點：好做，計數歸零就釋放，不會像 tracing GC 一樣，要找個時間來做 GC 讓程式暫停一陣子，</p>
+<p>缺點：每次都增加減少 count 也會有效能問題，且是不能出錯的東西，甚至要用鎖之類的方法來確保不會有 race condition<br />
+且要額外處理迴圈引用的問題</p>
+<p>二. Tracing: GC 啟動時從 roots 出發，再來找出沒在用的東西然後回收</p>
+<p>可以想像成一個 graph，裡面的 node 是一塊一塊的記憶體，被程式 allocate 來使用，edge 就是 reference</p>
+<p>roots 就是那些我們可以直接存取到的東西 (像是全域變數或是 goroutine stack)，由這些 roots 開始去做圖的 traverse，所有可以從這些 roots<br />
+連接到的東西都是還在使用的，到達不了的 node 就是垃圾</p>
+<p>在這邊也有一種 weak pointer 但和 reference counting 的用法不同，這種 edge 是可以存取一個物件，但不保護這個物件不被回收</p>
+<p>常見名詞：<br />
+Mutator: 改變那些記憶體reference的東西，像是我們的程式就是</p>
+<p>Mutator roots: root set, root objects，可以直接被存取的物件，像是靜態或全域變數、參數、Goroutine stack的其他東西</p>
+<p>Collector: 負責回收垃圾的程式</p>
+<h3 id="copy-gc">Copy GC</h3>
+<p>最原始的垃圾回收</p>
+<p>把全部的記憶體切成兩份，一般時候都是用同一份</p>
+<p>當要收垃圾的時候就是從 roots 出發 traverse，把不是垃圾的東西複製到另一份，然後原本的那一份就可以清空了（當作垃圾，不用真的清）</p>
+<p>文章可以參考這個：https://zhuanlan.zhihu.com/p/28197216</p>
+<p>Traverse 和複製時要注意的就是指標的值也要順便更新</p>
+<p>缺點是空間要用很多</p>
+<p>不過複製的時候可以順便讓記憶體更 compact 是好處</p>
+<h3 id="基本的-mark-and-sweep">基本的 Mark and Sweep</h3>
+<p><a href="https://liujiacai.net/blog/2018/07/08/mark-sweep/">https://liujiacai.net/blog/2018/07/08/mark-sweep/</a><br />
+就是簡單的收垃圾XD<br />
+網路上很多 pseudo code 可以看</p>
+<ol>
+<li>先把其他在做的事情都停住 (Stop the world)</li>
+<li>從 roots 出發把有用到的東西 mark 起來</li>
+<li>掃過 heap 所有的物件，把沒用的清除</li>
+<li>恢復運作</li>
+</ol>
+<p>簡單可以發現問題點，有記憶體碎片、掃過整個 heap 很慢、要停止所有東西</p>
+<p><a href="https://stackoverflow.com/questions/23057531/what-are-the-advantages-and-disadvantages-of-having-mark-bits-together-and-separ">https://stackoverflow.com/questions/23057531/what-are-the-advantages-and-disadvantages-of-having-mark-bits-together-and-separ</a><br />
+優化<br />
+Bitmap marking： 用 bitmap 來紀錄哪些 object 是被 mark 住的<br />
+Lazy sweep：allocate 時才去做清垃圾，而且只清剛好需要的空間就好，平常只做標記</p>
+<h3 id="mark-compact">Mark-Compact</h3>
+<p>先把還有在用的標記起來然後 compact<br />
+<a href="https://en.wikipedia.org/wiki/Mark-compact_algorithm">https://en.wikipedia.org/wiki/Mark-compact_algorithm</a><br />
+目的就是要把還在使用的記憶體聚集在一起，減少記憶體碎片，碎片多就是母湯</p>
+<p>常見的做法就是掃過 heap，然後把每個 obj 往邊邊移動就好<br />
+wikipedia裡面介紹了兩種方法</p>
+<h4 id="table-based">Table-based</h4>
+<p>是需要掃過記憶體兩次，第一次掃過時要用一個 break table 記住每個 obj 原本的位置還有預計要移動到的位置，然後就將該 obj 移動<br />
+第二個 pass 是要用 break table 調整這些 obj 裡面的 pointer</p>
+<p>Break table 也是存在同一個 heap 內，搬移的時候可能會卡到，table 打散要重新排序(???)</p>
+<h4 id="lisp2-algorithm">LISP2 algorithm</h4>
+<p>是一個簡單多的演算法<br />
+要 3 個 pass</p>
+<ol>
+<li>算出來每個 obj 預計會到哪</li>
+<li>更新每個 obj 指出去的 pointer</li>
+<li>移動~<br />
+其中第一步預計要移動去哪的資訊會存在各自 obj 中</li>
+</ol>
+<h2 id="incremental-gc">Incremental GC</h2>
+<p><a href="https://liujiacai.net/blog/2018/08/04/incremental-gc/#%E5%A2%9E%E9%87%8F%E5%BC%8F-GC-%E6%80%9D%E8%B7%AF">https://liujiacai.net/blog/2018/08/04/incremental-gc/#%E5%A2%9E%E9%87%8F%E5%BC%8F-GC-%E6%80%9D%E8%B7%AF</a></p>
+<p><a href="https://segmentfault.com/a/1190000022030353">https://segmentfault.com/a/1190000022030353</a></p>
+<p><a href="https://titanwolf.org/Network/Articles/Article?AID=786c12ef-88b2-42da-984a-41ef4b5669d1#gsc.tab=0">https://titanwolf.org/Network/Articles/Article?AID=786c12ef-88b2-42da-984a-41ef4b5669d1#gsc.tab=0</a><br />
+不一次做完整個垃圾回收的動作 (其實 ref counting 就類似，但缺點不少)，每次停頓小(最重要的優點)，但 throughpu 會降低就是了</p>
+<p>mark 的階段會被分成很多次</p>
+<h3 id="三色標記法tricolor-marking">三色標記法（tricolor marking）</h3>
+<p>一樣從 roots 出發去 traverse 整個 obj graph，過程中會將 obj 們標成不同顏色<br />
+一開始 roots 都是灰色，其餘白色</p>
+<p>黑：可以到達，且該節點的子節點都看過了<br />
+灰：可以到達，還沒去檢查該節點的子節點們<br />
+白：還沒到達，如果 mark 結束都還是白色就會被當作垃圾</p>
+<p>標記階段可以被中斷，下次要開始時可以從灰色的子節點開始檢查<br />
+直到沒有灰色節點時就完成 mark 階段<br />
+灰色是用來記錄 mark 中斷後，又被 mutator 改變狀態的節點<br />
+新建的 obj 依照不同的方法會設為不同顏色</p>
+<p>然而在標記階段中斷後再次開始前，我們的程式(mutator)可能會去改變這些 obj 之間的 reference，以下圖為例 (從上面網站抓來的)</p>
+<p><img src="https://i.imgur.com/nzjaiSc.png" alt="" /></p>
+<p>改變後可能造成黑A直接 ref 到白D，下次 mark 再開始後因為 A 是黑色，導致 D 不會被掃到，誤當成垃圾</p>
+<h4 id="tricolor-invvariant">Tricolor invvariant</h4>
+<p>為了避免上述的情況發生，三色標記法限制了節點的顏色與 reference 的關係<br />
+下面兩種只要其中一種滿足即可</p>
+<p>Strong Invariant: 黑色不可直接指到白色，上面那種情況我們不會再去檢查黑點的子節點，導致戊收垃圾</p>
+<p>Weak Invariant: 黑可以直接指到白色，但這個白色必須是某個灰色節點的直接或間接後代</p>
+<p>參考圖 <a href="https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-garbage-collector/">https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-garbage-collector/</a><br />
+<img src="https://i.imgur.com/NQelk48.png" alt="" /></p>
+<p>D 在右圖是 B 的後代，所以允許 A 直接 reference</p>
+<p>接下來就是當 mutator 在運作時，我們如何維持上述其中一種 invariant 了<br />
+在我們的程式 (mutator) 做事情時，需要插入一些 collector 的動作</p>
+<ol>
+<li>
+<p>read barrier<br />
+顧名思義讀資料的時候插入動作，防止 mutator 去讀白色的 obj</p>
+<p>讀白色 obj 時就把它標成灰色<br />
+例：上面那個 Figure 7 在讀 D 的時候就把 D 塗成灰色</p>
+<p>可以保證上面的 strong invariant</p>
+</li>
+<li>
+<p>write barrier</p>
+</li>
+</ol>
+<p><a href="https://www.mdeditor.tw/pl/prRu/zh-tw">https://www.mdeditor.tw/pl/prRu/zh-tw</a><br />
+<a href="https://www.mdeditor.tw/pl/pFz3/zh-tw">https://www.mdeditor.tw/pl/pFz3/zh-tw</a><br />
+寫資料時插入動作，基本的有兩種<br />
+stack太多，如果開write barrier會很慢，通常只開heap，所以以下兩種方法需要再開始或結束時掃一次stack來處理，預防有白色被已掃過的stack指到</p>
+<pre><code>a. insert write barrier (dijkstra)
+當 mutator 把黑色指向白色時，會將白色變成灰色，或者把黑色變成灰色 (前者好像比較常見)
+如此一來就符合 strong invariant 了～
+mark結束後要再掃一次stack，因為stack沒開wb，指到的東西可能是白色卻需要存活
+
+b. delete write barrier (Yuasa)
+若有一個指針指向一個 obj 且該 obj 為白或灰
+當 mutator 此指針拿掉時，該 obj 要被塗成灰色
+
+一開始需要掃roots，把roots直接指到的都塗灰
+為何需要開始時掃stack-
+http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/ilc2002/slide.pdf
+因為stack沒開rb，如果有一個root在stack上，若他直接指到某個obj，且這個pointer在這個obj被看到前，就被移除，那此obj可能被另外的黑色指到，就還是白色卻需要存活
+</code></pre>
+<p>一般來說 write barrier 的效率會比較好，因為 heap 讀比寫多很多</p>
+<h2 id="generational-gc">Generational GC</h2>
+<p><a href="https://liujiacai.net/blog/2018/08/18/generational-gc/">https://liujiacai.net/blog/2018/08/18/generational-gc/</a><br />
+分代，大部分的東西剛創建不久就會變成垃圾，所以把年輕和老的物件分開存<br />
+年輕的部分常常做ＧＣ，老的偶爾做</p>
+<p>通常年輕的 obj 多，老的少<br />
+young -&gt; old 的 pointer 比 old -&gt; young 多</p>
+<ul>
+<li>不動到 old，獨立回收 young 部分<br />
+考慮到 old -&gt; young 的 pointer<br />
+可以新增 write barrier 做一些操作，當 old 指到 young 時就記住，把被指到的 young 當作 young gc 時的 root</li>
+</ul>
+<p>若該 old 是變成垃圾，則 young 會暫時成為實際上是垃圾的 root<br />
+所以下次老 gc 時要清掉</p>
+<ul>
+<li>獨立回收 old<br />
+要考慮到 young -&gt; old 的 pointer<br />
+可以依照上面的方法來做，但通常 young -&gt; old 的 pointer 數量較多<br />
+要記錄的東西會很多，可以直接把所有 young 當作 root set，反正不多</li>
+</ul>
+<h1 id="go-gc">Go GC</h1>
+<p>一開始適用插入屏障後來改用混合型，結合插入和刪除寫屏障，去除了開頭或結束時的 scan</p>
+<p>介紹怎麼讓 Go gc 更有效率<br />
+<a href="https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html">https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html</a></p>
+<p><a href="https://golangpiter.com/system/attachments/files/000/001/718/original/GP_2019_-_An_Insight_Into_Go_Garbage_Collection.pdf?1572419303">https://golangpiter.com/system/attachments/files/000/001/718/original/GP_2019_-_An_Insight_Into_Go_Garbage_Collection.pdf?1572419303</a><br />
+<img src="https://i.imgur.com/scbHmvH.png" alt="" /></p>
+<p><a href="https://www.mdeditor.tw/pl/prRu/zh-tw">https://www.mdeditor.tw/pl/prRu/zh-tw</a><br />
+<a href="https://www.mdeditor.tw/pl/pFz3/zh-tw">https://www.mdeditor.tw/pl/pFz3/zh-tw</a></p>
+<p>&quot;&rdquo; 引用上面文章的段落<br />
+在Go 語言 v1.7 版本之前，使用的是 Dijkstra 插入寫屏障保證強三色不變性，但是執行時並沒有在所有的垃圾收集根物件上開啟插入寫屏障。因為 Go 語言的應用程式可能包含成百上千的 goroutine，而垃圾收集的根物件一般包括全域性變數和棧物件，如果執行時需要在幾百個 goroutine 的棧上都開啟寫屏障，會帶來巨大的額外開銷，所以 Go 團隊在實現上選擇了在標記階段完成時暫停程式、將所有棧物件標記為灰色並重新掃描，在活躍 goroutine 非常多的程式中，重新掃描的過程需要佔用 10 ~ 100ms 的時間<br />
+&quot;&rdquo;</p>
+<p><a href="https://studygolang.com/articles/27243">https://studygolang.com/articles/27243</a></p>
+<h3 id="hybrid-write-barrier">Hybrid write barrier</h3>
+<p><a href="https://github.com/golang/proposal/blob/master/design/17503-eliminate-rescan.md">https://github.com/golang/proposal/blob/master/design/17503-eliminate-rescan.md</a></p>
+<p>可以看 Proposal 和 Reasoning，有介紹為何他們可以消除開頭或結尾的掃描</p>
+<pre><code>writePointer(slot, ptr):
+    shade(*slot)
+    if current stack is grey:   
+        shade(ptr)
+    *slot = ptr
+</code></pre><pre><code>奇怪的例子
+A-&gt;B
+C-&gt;nil
+
+都在 AC 都在 stack 上，若C黑，AB白
+當變成
+A -&gt; nil
+C -&gt; B
+時，因為是stack 所以wb都不會啟動？
+
+B會被誤刪嗎
+</code></pre><p>這裡說當混合寫屏障時，在掃描特定一個goroutine上的stack時還是要暫停，一次掃完(所以上面那種情況不會出現)<br />
+但不用像Yuasa一開始把全部stack掃完或是Dijkstra最後重掃<br />
+<a href="https://liqingqiya.github.io/golang/gc/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/%E5%86%99%E5%B1%8F%E9%9A%9C/2020/07/24/gc5.html">https://liqingqiya.github.io/golang/gc/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/%E5%86%99%E5%B1%8F%E9%9A%9C/2020/07/24/gc5.html</a></p>
+<p>其餘連結<br />
+<a href="https://mcll.top/2020/04/14/gc-write-barrier/">https://mcll.top/2020/04/14/gc-write-barrier/</a><br />
+<a href="https://www.bookstack.cn/read/qcrao-Go-Questions/spilt.3.GC-GC.md">https://www.bookstack.cn/read/qcrao-Go-Questions/spilt.3.GC-GC.md</a></p>
+<p>原始碼<br />
+<a href="https://go.googlesource.com/go/+/go1.7beta2/src/runtime/mbarrier.go">https://go.googlesource.com/go/+/go1.7beta2/src/runtime/mbarrier.go</a></p>
 
     </article>
     
@@ -1671,13 +1842,13 @@ server 把 csrf token 設到瀏覽器的 cookie 內，瀏覽器在送 request �
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fcsrf%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fgc%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Csrf&url=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fcsrf%2f&hashtags=csrf&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=%e5%9e%83%e5%9c%be%e5%9b%9e%e6%94%b6%ef%bc%81&url=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fgc%2f&hashtags=Go%2cGarbage%20collection%2c%e5%9e%83%e5%9c%be%e5%9b%9e%e6%94%b6&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -1796,26 +1967,46 @@ server 把 csrf token 設到瀏覽器的 cookie 內，瀏覽器在送 request �
     <section class="related">
     
     
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        See Also
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/scheduling-in-go-part-iii/" class="related__link">Scheduling in Go Part III</a>
+        </li>
+        
+        <li>
+          <a href="/posts/scheduling-in-go-part-ii/" class="related__link">Scheduling in Go Part II</a>
+        </li>
+        
+        <li>
+          <a href="/posts/go-map/" class="related__link">Go 的 MAP 要不要用指標</a>
+        </li>
+        
+        <li>
+          <a href="/posts/scheduling-in-go-part-i/" class="related__link">Goroutine 為啥那麼快 (Scheduling in Go) Part I</a>
+        </li>
+        
+    </ul>
+    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://markogoodman.github.io/posts/scheduling-in-go-part-iii/" class="pagination-single__left">
+      <a href="https://markogoodman.github.io/posts/csrf/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Scheduling in Go Part III</div>      
+        <div class="pagination-single__left-title">Csrf</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://markogoodman.github.io/posts/gc/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">垃圾回收！</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>

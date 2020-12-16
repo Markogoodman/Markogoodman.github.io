@@ -4,7 +4,42 @@
   
   <url>
     <loc>https://markogoodman.github.io/categories/</loc>
-    <lastmod>2020-10-17T15:05:29+08:00</lastmod>
+    <lastmod>2020-12-16T22:35:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/garbage-collection/</loc>
+    <lastmod>2020-12-16T22:35:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/go/</loc>
+    <lastmod>2020-12-16T22:35:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/</loc>
+    <lastmod>2020-12-16T22:35:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/</loc>
+    <lastmod>2020-12-16T22:35:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</loc>
+    <lastmod>2020-12-16T22:35:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/gc/</loc>
+    <lastmod>2020-12-16T22:35:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2020-12-16T22:35:13+08:00</lastmod>
   </url>
   
   <url>
@@ -15,26 +50,6 @@
   <url>
     <loc>https://markogoodman.github.io/tags/csrf/</loc>
     <lastmod>2020-10-17T15:05:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/</loc>
-    <lastmod>2020-10-17T15:05:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/tags/</loc>
-    <lastmod>2020-10-17T15:05:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
-    <lastmod>2020-10-17T15:05:29+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/tags/go/</loc>
-    <lastmod>2020-09-19T21:41:43+08:00</lastmod>
   </url>
   
   <url>
