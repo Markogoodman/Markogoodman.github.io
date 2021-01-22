@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>graphql on Marko</title>
+    <link>https://markogoodman.github.io/tags/graphql/</link>
+    <description>Recent content in graphql on Marko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
+    <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
+    <copyright>©{2020}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 23 Jan 2021 01:04:19 +0800</lastBuildDate>
+    
+        <atom:link href="https://markogoodman.github.io/tags/graphql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Gqlgen</title>
+        <link>https://markogoodman.github.io/posts/gqlgen/</link>
+        <pubDate>Sat, 23 Jan 2021 01:04:19 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sat, 23 Jan 2021 01:04:19 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/gqlgen/</guid>
+        <description>一直都聽說 Graphql 很潮(? 工作上其實也有遇到類似的問題，一個玩家的資料有一堆欄位，常常因為各種需求加了一堆參數或 API 來拿裡面的不同欄位，graphq</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Go</category>
+            
+          
+            
+              <category>gqlgen</category>
+            
+          
+            
+              <category>graphql</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
