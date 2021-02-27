@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Concurrency in Go on Marko</title>
+    <link>https://markogoodman.github.io/series/concurrency-in-go/</link>
+    <description>Recent content in Concurrency in Go on Marko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
+    <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
+    <copyright>©{2020}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 27 Feb 2021 23:21:42 +0800</lastBuildDate>
+    
+        <atom:link href="https://markogoodman.github.io/series/concurrency-in-go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Concurrency in Go - I</title>
+        <link>https://markogoodman.github.io/posts/concurrency-in-go-i/</link>
+        <pubDate>Sat, 27 Feb 2021 23:21:42 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sat, 27 Feb 2021 23:21:42 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/concurrency-in-go-i/</guid>
+        <description>這三章節內容其實滿少的，讀過之後隨便記一記 ch1 Why Is Concurrency Hard? Race condition 應該要依序執行的不同指定們，沒有依照正確的順序造成結果錯誤 例如下面這段程式就有可能出</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Go</category>
+            
+          
+            
+              <category>Goroutine</category>
+            
+          
+            
+              <category>concurrency</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+          
+            
+              <category>Concurrency in Go</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
