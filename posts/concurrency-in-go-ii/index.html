@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Concurrency in Go - I – Marko</title>
+    <title>Concurrency in Go - II 第四章 – Marko</title>
     
 
 
@@ -556,7 +556,7 @@
     
     var baseurl = JSON.parse("\"https://markogoodman.github.io/\"");
     
-    var permalink = JSON.parse("\"https://markogoodman.github.io/posts/concurrency-in-go-i/\"");
+    var permalink = JSON.parse("\"https://markogoodman.github.io/posts/concurrency-in-go-ii/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -1212,23 +1212,23 @@
 
 
     
-<meta name="description" content="Concurrency in Go 這本書前三章的讀書筆記～ " />
+<meta name="description" content="Concurrency in Go 第四章～ " />
 
 
 <meta name="keywords" content="Go,Goroutine,concurrency">
 
-<meta name="created" content="2021-02-27T23:21:42&#43;0800">
-<meta name="modified" content="2021-02-27T23:21:42&#43;0800">
-<meta property="article:published_time" content="2021-02-27T23:21:42&#43;0800">
+<meta name="created" content="2021-02-28T22:32:38&#43;0800">
+<meta name="modified" content="2021-02-28T22:32:38&#43;0800">
+<meta property="article:published_time" content="2021-02-28T22:32:38&#43;0800">
 
 <meta name="author" content="Marko Peng">
 
 
 <meta property="og:site_name" content="Marko">
-<meta property="og:title" content="Concurrency in Go - I">
-<meta property="og:url" content="https://markogoodman.github.io/posts/concurrency-in-go-i/">
+<meta property="og:title" content="Concurrency in Go - II 第四章">
+<meta property="og:url" content="https://markogoodman.github.io/posts/concurrency-in-go-ii/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="Concurrency in Go 這本書前三章的讀書筆記～ ">
+<meta property="og:description" content="Concurrency in Go 第四章～ ">
 
 <meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1239,7 +1239,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://markogoodman.github.io/posts/concurrency-in-go-i/">
+<link rel="canonical" href="https://markogoodman.github.io/posts/concurrency-in-go-ii/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1253,11 +1253,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Concurrency in Go - I",
-    "datePublished": "2021-02-27T23:21:42+08:00",
-    "dateModified": "2021-02-27T23:21:42+08:00",
-    "url" : "https://markogoodman.github.io/posts/concurrency-in-go-i/",
-    "description": "Concurrency in Go 這本書前三章的讀書筆記～ ",
+    "headline": "Concurrency in Go - II 第四章",
+    "datePublished": "2021-02-28T22:32:38+08:00",
+    "dateModified": "2021-02-28T22:32:38+08:00",
+    "url" : "https://markogoodman.github.io/posts/concurrency-in-go-ii/",
+    "description": "Concurrency in Go 第四章～ ",
     "keywords": ["Go","Goroutine","concurrency"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1526,7 +1526,7 @@
   
   <li  class="is-active" >
     
-      <span>Concurrency in Go - I</span>
+      <span>Concurrency in Go - II 第四章</span>
     
   </li>
   
@@ -1538,13 +1538,13 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Concurrency in Go - I</h2>
+    <h2 class="single__title" data-ani="true">Concurrency in Go - II 第四章</h2>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Feb 27, 2021 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Feb 28, 2021 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;6&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1566,226 +1566,269 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>這三章節內容其實滿少的，讀過之後隨便記一記</p>
-<h2 id="ch1">ch1</h2>
-<p>Why Is Concurrency Hard?<br />
-<strong>Race condition</strong><br />
-應該要依序執行的不同指定們，沒有依照正確的順序造成結果錯誤<br />
-例如下面這段程式就有可能出現很多結果，因為使用者可能以為go裡面的程式碼寫在前面，就會先跑</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span>
-<span class="k">go</span> <span class="kd">func</span><span class="p">(){</span>
-    <span class="nx">a</span><span class="o">++</span>
-<span class="p">}()</span>
-<span class="k">if</span> <span class="nx">a</span><span class="o">==</span><span class="mi">0</span><span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;zero&#34;</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>Atomicity</strong><br />
-不可切割，安全，一次要做完</p>
-<p><strong>Memory Access Synchronization</strong><br />
-不同地方可能 concurrently 存取同一個記憶體，需要變成 critical section 用鎖鎖住之類的，但會變慢</p>
-<p><strong>Deadlocks, Livelocks, and Starvation</strong></p>
-<p>dead lock -&gt; 4個條件</p>
-<p><strong>Determining Concurrency Safety</strong><br />
-• Who is responsible for the concurrency?<br />
-• How is the problem space mapped onto concurrency primitives?<br />
-• Who is responsible for the synchronization?</p>
-<h2 id="ch2">ch2</h2>
-<p>Go CSP<br />
-下圖是 Concurrency in Go 33 頁的圖<br />
-primitives 指的像是 sync package 裡面的 mutex<br />
-<img src="https://i.imgur.com/K8RhjPU.png" alt="" /></p>
-<p>四個條件的解釋</p>
-<ul>
-<li>
-<p>Are you trying to transfer ownership of data?<br />
-盡量維持一次只有一個人有資料的擁有權利，做完一件事後要把output丟給別人這種動作，適合用 channel</p>
-</li>
-<li>
-<p>Are you trying to guard internal state of a struct?<br />
-把實作藏起來不讓外面看到 -&gt; 用primitives</p>
-</li>
-<li>
-<p>Are you trying to coordinate multiple pieces of logic?<br />
-到處都有 lock 很容易造成問題，而 channel 的組合性很好，出錯也好抓，複雜的邏輯最好用 channel 來做 而不是自己到處鎖來鎖去</p>
-</li>
-<li>
-<p>Is it a performance-critical section?<br />
-真的發現使用 channel 造成巨大效能問題才改用 primitives，而不是為了效能一開始就用 primitives</p>
-</li>
-</ul>
-<h2 id="ch3">ch3</h2>
-<p>goroutine 不能被 interrupt?<br />
-以前好像是，後來改成可以，不然垃圾回收之類的功能有可能被卡住<br />
-但大多還是在固定時間才會被暫停，例如 sleep, 等 io 之類的</p>
-<p>goroutine closure 在同一個 address space 執行</p>
-<pre><code>	var wg sync.WaitGroup
-	salutation := &quot;hello&quot;
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-		salutation = &quot;welcome&quot;
-	}()
-	wg.Wait()
-	fmt.Println(salutation)
-</code></pre><h3 id="the-sync-package">The sync package</h3>
-<h4 id="waitgroup">WaitGroup</h4>
-<pre><code>    var wg sync.WaitGroup // 傳進 func 時要傳 pointer
-    wg.Add(2) // +2
-    defer wg.Done() // -1
-    wg.Wait() // == 0 時完成
-</code></pre><h4 id="mutex">mutex</h4>
-<pre><code>    var lock sync.Mutex
-    lock.Lock()
-    defer lock.Unlock()
-    
-    var m sync.RWMutex
-    m.Lock() // rw lock
-    m.RLock() // r lock
-    m.RLocker() // r locker 
-</code></pre><h4 id="cond">Cond</h4>
-<p>有效率的等待，不用浪費ＣＰＵ跑迴圈</p>
-<pre><code>c := sync.NewCond(&amp;sync.Mutex{}) 
-c.L.Lock()
-for conditionTrue() == false {
-    c.Wait()  // suspend, 其他 goroutine 可以用 thread
+      <h2 id="concurrency-in-go-第四章-concurrency-patterns-in-go">Concurrency in go. 第四章 Concurrency Patterns in Go</h2>
+<p>這章節就是講一些常見的 Go concurrency pattern，有哪些方便使用以及如何安全的使用這些 pattern</p>
+<h3 id="confinement">confinement</h3>
+<p>要做到 concurrent safe 除了之前說的 channel 與 primitives 還有些方法</p>
+<p>像是 Immutable data 是 concurrent safe 的，大家可用但是不能改，要不同的值就自己 create (像是 string)</p>
+<p>而 confinement 有兩種 adhoc 與 lexical<br />
+adhoc 是類似大家約定好的寫程式規範，例如約定好只在某部分的 function 存取這個共同變數（即使在其他部分也可以存取這個變數），以這種方法來達到 concurrent safe<br />
+而開發者變多以後，不一定大家都會知道且遵守這規範，可能造成程式出錯</p>
+<p>而 lexical confinement 是利用 compiler 及語言特性直接限制這種錯誤的發生，就如同只有 channel owner 可以傳資料，consumer 只會收到一個 read only 的 channel 這種方法<br />
+或著是如下面的 code</p>
+<pre><code class="language-=go" data-lang="=go">data := []byte(&quot;dataaatata&quot;)
+go processData(&amp;wg, data[:i])
+go processData(&amp;wg, data[i:])
+</code></pre><p>把data切開，直接讓兩個 goroutine 不會互相影響<br />
+也可以盡量減少 goroutine 之間的溝通，大多數要互相溝通的程式寫起來會比較複雜一點</p>
+<h2 id="常見-pattern">常見 pattern</h2>
+<h3 id="for-select">for select</h3>
+<pre><code>for { // 無窮迴圈或某個可iter的東西例如 []string{&quot;x&quot;, &quot;y&quot;, &quot;z&quot;}
+    select {
+    case &lt;-done:
+        // break or return
+    case result &lt;- data:
+        fmt.Println(&quot;put something&quot;)
+    default:
+        // 做其他事
+    } 
 }
-c.L.Unlock()
-
-
-c.Singal() 去戳正在 Wait 的一個 goroutine (最早開始等的)
-c.Broadcast() 去戳所有在 Wait 的 goroutines
-
-</code></pre><p>signal 可以用 channel 來做出一樣的功能<br />
-但 broadcast 會比較麻煩，也可能需要很多操作</p>
-<h4 id="once">once</h4>
-<pre><code>var once sync.Once
-once.Do(xxx)
-</code></pre><p>即使一堆 goroutine，也保證 once 只會做一件事情</p>
-<p>下面這種也是只會執行aaa</p>
-<pre><code>once.Do(aaa)
-once.Do(bbb)
-</code></pre><p>計數是記once 做過的事情而不是 unique function 數</p>
-<h4 id="pool">Pool</h4>
-<p>創造及持有東西很貴 不希望有太多 所以放在一個 pool 重複運用並限制數量</p>
-<p>提前把一些東西塞進 pool 避免 create，像是 db 連線等等</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">myPool</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">sync</span><span class="p">.</span><span class="nx">Pool</span><span class="p">{</span>
-		<span class="nx">New</span><span class="p">:</span> <span class="kd">func</span><span class="p">()</span> <span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
-			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Creating new instance.&#34;</span><span class="p">)</span>
-			<span class="k">return</span> <span class="kd">struct</span><span class="p">{}{}</span>
-		<span class="p">},</span>
-	<span class="p">}</span>
-	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
-	<span class="nx">instance</span> <span class="o">:=</span> <span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
-	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Put</span><span class="p">(</span><span class="nx">instance</span><span class="p">)</span>
-	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>使用方法：</p>
-<ol>
-<li>加入 New func</li>
-<li>Get 的東西有可能是任何狀態</li>
-<li>記得 Put 回去，通常用 defer</li>
-<li>裡面的東西基本上要長得一樣</li>
-</ol>
-<h3 id="channels">Channels</h3>
-<pre><code>    var dataStream chan int
-    var dataStream &lt;-chan int
-    var dataStream chan&lt;- int
-    dataStream = make(&lt;-chan int, 1) 
-    
-    很少會 make 單向的 chan，通常是傳參數時會用
-    dataStream := make(chan int)
-    var d chan&lt;- int
-    d = dataStream
-</code></pre><p>關閉 channel<br />
-之後還是可以無限讀取，因為可能很多下游的 goroutine 都需要讀</p>
-<pre><code>	dataStream := make(chan int)
-	go func() {
-		close(dataStream)
-
-	}()
-	d, ok := &lt;-dataStream
-	fmt.Println(&quot;I GET! &quot;, d, ok) // 0, false
-</code></pre><pre><code>收到 close 時會直接 break
-for integer := range intStream { 
-    fmt.Printf(&quot;%v &quot;, integer)
+</code></pre><h3 id="goroutine-leak">Goroutine leak</h3>
+<p>指的是我們不希望一直存在的 goroutine 一直存在，造成記憶體問題<br />
+例如</p>
+<pre><code>var ss chan string
+go func() {
+    for s := range ss {
+        fmt.Println(s)
+    }
+}()
+</code></pre><p>如果 ss 是 nil，或是根本沒人去關閉這個 chan<br />
+那這個 goroutine 就會一直存在直到 process 結束<br />
+程式碼中如果重複創造出這種東西到最後記憶體就用完了</p>
+<p>要記得關閉或著是使用 for select + done chan 去提醒 goroutine 該結束了</p>
+<pre><code>go func(){
+    // done is a &lt;-chan inteface{}
+    for {
+        select { 
+        case &lt;-done:
+            return
+        case OOO: 
+        }
+    }
+}()
+</code></pre><h3 id="the-or-channel">The or-channel</h3>
+<p>p.94 很長一串，總之要記得把 orDone 傳下去，避免上層已經結束而下面的goroutine 都沒關掉</p>
+<h3 id="error-handling">Error handling</h3>
+<p>p. 111<br />
+在一堆 concurrent processes 中，一個重要的問題是誰要處理 error<br />
+下面這段 code 是在 worker 裡面處理，但他最多也只能印出 err 讓人知道</p>
+<pre><code class="language-=go" data-lang="=go">worker := func(done &lt;-chan interface{}, params) &lt;-chan int {
+    results := make(chan int)
+    go func() {
+        defer close(results)
+        for {
+            res, err := DoSomething(params)
+            if err != nil {
+                fmt.Println(err)
+                continue
+            }
+            select {
+            case &lt;-done:
+                return
+            case results &lt;- res:
+            }
+        }
+    }()
+    return results
 }
-</code></pre><p>p.75 列出了不同狀態的 chan 上操作會出現什麼情況，包括錯誤們</p>
-<p>p. 91 有範例<br />
-要用好 channel 有幾點</p>
+</code></pre><p>如果像下面這樣將 error 傳回，接收這些 result 的 goroutine 也可以依據 error 來決定各個 worker 是否該繼續存活等等</p>
+<pre><code>type Result struct { 
+    Error error
+    Result int
+}
+worker := func(done &lt;-chan interface{}, params) &lt;-chan Result {
+    results := make(chan Result)
+    go func() {
+        defer close(results)
+        for {
+            res, err := DoSomething(params)
+            select {
+            case &lt;-done:
+                return
+            case results &lt;- Result{Error: err, Result: res}:
+            }
+        }
+    }()
+    return results
+}
+</code></pre><p>就像是一般的 go function 會回傳 result + err，在一個對上下文不清楚，單純是負責執行任務的 goroutine 中，把 res + err 一起傳回去常常是很好的選擇 ，讓對上下文更清楚的 goroutine 去處理 error</p>
+<h3 id="pipeline">Pipeline</h3>
+<p>一連串的 stage，輸入輸出資料，隨意組合<br />
+輸入與輸出同type，每個 stage 獨立易修改</p>
+<pre><code class="language-=go" data-lang="=go">// Batch processing
+for _, i := range stage2(stage1(intSlice)) {
+    fmt.Println(i)
+}
+</code></pre><pre><code class="language-=go" data-lang="=go">// streaming
+for _, i := range intSlice {
+    fmt.Println(stage2(stage1(i)))
+}
+</code></pre><h4 id="best-practices-for-constructing-pipelines">Best Practices for Constructing Pipelines</h4>
+<p>channel 很適合<br />
+上面那個 streaming 的例子是一個 element 拿出來，處理完所有 stage 之後才換下一個 element</p>
+<p>p. 118 範例滿有趣的<br />
+使用 channel，每個 stage 各自跑起 goroutine，每個 element 經過一個 stage 之後會直接塞到 chan 中，讓下一個 stage 拿，自己也準備開始處理下一個 element</p>
+<pre><code class="language-=go" data-lang="=go">// example
+func multiply(done &lt;-chan interface{}, intStream &lt;-chan int, mu int) &lt;-chan int{
+	outStream := make(chan int)
+        go func(){
+		defer close(outStream)
+		for i := range intStream{
+			select{
+			case &lt;-done:
+				return
+			case outStream &lt;- i*mu:
+			}
+		}
+	}()
+
+	return outStream
+}
+
+// add 與 multiply 是 stage
+// generator 是一個會一直有其他人塞資料進來的 chan，可能是去讀檔案或是網路收資料等等，generator 時常也會傳入同一個 done 一起控制開關
+for v := range multiply(done, add(done, generator, 1), 2){
+    fmt.Println(v)
+}
+</code></pre><h4 id="fan-out-fan-in">Fan-out, Fan-in</h4>
+<p>p. 114<br />
+pipeline stage 中可能有某些 stage 要花很多時間來執行<br />
+那便會成為整條pipe的效能瓶頸<br />
+這時可以嘗試用多個 goroutine 來執行這個 stage，同時處理多個資料來加速<br />
+這就叫做 fan out<br />
+而多個 goroutine 處理完資料後，要將資料流到一個管道中，讓下一個 stage 可以從這個管道取出資料，則叫做 fan in<br />
+大概的使用方法如下，例子取自書中</p>
+<pre><code class="language-=go" data-lang="=go">// p. 116, fan-out
+numFinders := runtime.NumCPU()
+finders := make([]&lt;-chan int, numFinders) 
+for i := 0; i &lt; numFinders; i++ {
+        finders[i] = primeFinder(done, randIntStream)
+    }
+
+</code></pre><p>primeFinder 就是和之前那些例子一樣的一個 stage，接收一個 input channel 從裡面拉資料，會將結果傳回 return 的 channel，只是這個 stage 要花很多時間去計算</p>
+<p>而 fan-in 的例子在 p. 117，主要就是會接收 n 個 input channel (上面那些 finders)，並跑起 n 個 goroutine 來把這 n 個 input channel 的資料接到一個 output channel 上，還有用 wg 控制當 input chan 全關或 done 時，要把 output 關掉</p>
+<h4 id="the-or-done-channel">The or-done-channel</h4>
+<p>p. 119<br />
+之前的 pipeline 例子上都是直接用 for 去 range 一個 channel<br />
+但實際上不是在使用 pipeline 時，被讀取的 channel 行為會無法預知，目前的 code 收到 done 時，不代表該 channel 會被關閉<br />
+用下面這種 code 可能導致 leak</p>
+<pre><code>for v := range channel {
+   // do something
+}
+</code></pre><p>所以要像前面的預防 goroutine leak 那邊使用 for select 來處理<br />
+當目前的 code 收到 done 時，channel 就算沒關閉也可以跳出 range<br />
+orDone 主要是把展開很醜的東西包在 function 裡面，讓 code 乾淨點</p>
+<pre><code>for v := range orDone(done, channel) {
+   // do something
+}
+</code></pre><p>以下截自 p. 120</p>
+<pre><code class="language-=go" data-lang="=go">orDone := func(done, c &lt;-chan interface{}) &lt;-chan interface{} {
+    valStream := make(chan interface{})
+    go func() {
+        defer close(valStream)
+        for {
+            select {
+            case &lt;-done:
+                return
+            case v, ok := &lt;-c:
+                if ok == false {
+                    return
+                }
+                // 如果直接 valStream &lt;- v 而不用 select，收到 done 時也可能被 valStream 卡住
+                select { 
+                case valStream &lt;- v: 
+                case &lt;-done:
+                }
+            }
+        }
+    }()
+    return valStream
+}
+</code></pre><h4 id="tee-channel">tee-channel</h4>
+<p>一個 chan 變兩個</p>
+<h4 id="bridge-channel">bridge-channel</h4>
+<p>把 channel of channels 中每個 chan 拿出來並把東西都讀出</p>
+<h2 id="queuing">Queuing</h2>
+<p><a href="https://www.cnblogs.com/276815076/p/8615500.html">https://www.cnblogs.com/276815076/p/8615500.html</a><br />
+p. 124<br />
+Go 裡面的 buffered channel 常常會被拿來當做 queue 使用<br />
+隨便增加 queue 可能會把一些問題藏起來，像是 dead lock, live lock</p>
+<p>在 pipeline 中隨便加入 queue 通常不會增加整體的效能，只會改變一些些行為<br />
+例如下面的例子</p>
+<pre><code class="language-=go" data-lang="=go">a := A(done, inputStream) // 每個 element 花費1秒
+b := B(done, a)           // 每個 element 花費3秒
+</code></pre><p>B 要處理一個 element 的時間比較長，所以 A 把資料往 a 送時，可能會被 B 的讀取速度卡住<br />
+但就算在他們中間加了一個 buffer 也只是讓 A 可以快速的把 inputStream 處理完早早關閉，但總體執行時間還是被 B 限制住</p>
+<p>書上舉了下面的例子</p>
+<pre><code class="language-=go" data-lang="=go">p := processRequest(done, acceptConnection(done, httpHandler))
+</code></pre><p>如果是這種情況，我們就可能會想要在 accpet 到 process 之間加入 buffer，否則 client 的 request 們可能會慢慢出現 timeout, 被拒絕的情況<br />
+這邊我們要減少的是前一個 stage 被 block 的情況，而不是 process 的效能。讓這兩個 stage 的處理互相解耦</p>
+<p>在這邊提到主要有兩個使用 queue 的理由</p>
 <ol>
-<li>確認 channel 的 owner 是誰（盡量少）</li>
-<li>owner 負責 channel 的創造、寫、關、轉移 ownership</li>
-<li>非 owner 負責讀，確認 chan 何時關、處理 blocking</li>
+<li>批次處理可以得到好處</li>
+<li>某個 stage delay 或塞住會造成不好的 feedback loop</li>
 </ol>
-<p>例如第 2 點，把 owner 限制在很小的範圍，就可以避免寫入 nil chan、close closed chan 之類的 p.75 所提的程式邏輯 bug</p>
-<h3 id="select">Select</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">    <span class="nx">v1</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
-    <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
-        <span class="nb">close</span><span class="p">(</span><span class="nx">v1</span><span class="p">)</span>
-    <span class="p">}()</span>
-
-
-    <span class="k">select</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="nx">x</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">v1</span><span class="p">:</span> <span class="c1">// v1 有東西拿時
-</span><span class="c1"></span>        <span class="c1">// xxx
-</span><span class="c1"></span>    <span class="k">case</span> <span class="nx">v1</span> <span class="o">&lt;-</span> <span class="mi">1</span><span class="p">:</span>   <span class="c1">// v1 有空間時
-</span><span class="c1"></span>       <span class="c1">// ooo
-</span><span class="c1"></span>    <span class="p">}</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><p>當多個case都可以時會隨機選一個</p>
-<p>timeout<br />
-<code>case &lt;-time.After(1 * time.Second):</code></p>
-<p>default (通常和for一起用) 其他 case 都沒中的時候<br />
-<code>default:</code></p>
+<p>第一種滿常見的，譬如寫進 disk 之前我們會先希望在 memory 裡面盡量收集完資料再一次寫入，因為 disk 每次讀寫都很慢。又或著是需要存取遠端的資料庫，可能會想要收集多點 command 一次送去，減少來回消耗 等等等</p>
+<p>第二種<br />
+pipeline 與其他系統之間可能會互相影響<br />
+舉個例子 web server 與 client<br />
+如果 web server 在接收 request 時沒有 buffer，必須要等 req 才能繼續接收下一個，可能造成 req timeout，導致 client 繼續送更多 req 而越來越糟。<br />
+先把 req queue 住，client 就以為只是處理 req 久了點而已</p>
+<p>這種情況感覺比較難看出來，還需要對互動的系統有了解才行</p>
+<p>總結 queue 可以放的地方也是兩個</p>
+<ol>
+<li>batching 有好處的地方</li>
+<li>pipeline 開頭</li>
+</ol>
+<p>可以應用的情境不多，沒必要時也不必用，不然就多一個東西要管</p>
+<p>書上還介紹了 Little&rsquo;s law 但實在有點看不懂到底是怎麼用ＸＤ</p>
+<h4 id="the-context-package">The context Package</h4>
+<p>可以去看他的 interface，滿簡潔的</p>
+<p>ctx 主要功能：</p>
+<ol>
+<li>提供 API 去從 parent ctx 的位置去取消那些相關的 call，類似之前所說的 done</li>
+<li>裝 request 相關資料到處傳</li>
+</ol>
+<p>取消功能：</p>
+<ol>
+<li>上層想取消目前的動作</li>
+<li>目前的動作想取消他所產生出的子動作</li>
+<li>blocking 的動作需要可以被取消動作搶奪，避免 leak</li>
+</ol>
+<pre><code class="language-=go" data-lang="=go">ctx := context.Background()
+ctx2, c := context.WithCancel(ctx) // create new instance
+c()
+fmt.Println(ctx.Err())   //  nil
+fmt.Println(ctx2.Err())  //  context canceled
+</code></pre><p>因為是 create new instance 所以把 ctx 往下傳之後，下層無法呼叫 cancel 來取消上層（保護）</p>
+<p>原本的 done 方法也可以做到，但就要把 done 包來包去</p>
+<p>傳值的部分</p>
+<pre><code class="language-=go" data-lang="=go">userID := &quot;qq&quot;
+ctx := context.WithValue(context.Background(), &quot;userID&quot;, userID)
+fmt.Println(ctx.Value(&quot;userID&quot;))
+</code></pre><p>key 必須是可比較的 ==  != 之類的<br />
+value 必須是 concurrent safe</p>
+<p>key如果都使用 string，你又把 ctx 傳去別人的 package，有可能會撞<br />
+推薦的方法是自定義 unexported type 例如:</p>
+<pre><code class="language-=go" data-lang="=go">// p. 143
+type ctxKey int
+const (
+    ctxUserID ctxKey = iota ctxAuthToken
+)
+</code></pre><p>但要提供 func 去從 ctx 抓資料，完整範例在 p. 143<br />
+不過 ctx Value 好像也被很多人覺得很不安全，畢竟都是 interface{}<br />
+而且官方也建議 ctx 只放 request-scoped 的東西，但這東西也滿難定義的</p>
+<p>感覺還是少用（？</p>
 
     </article>
     
@@ -1847,13 +1890,13 @@ for integer := range intStream {
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fconcurrency-in-go-i%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fconcurrency-in-go-ii%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Concurrency%20in%20Go%20-%20I&url=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fconcurrency-in-go-i%2f&hashtags=Go%2cGoroutine%2cconcurrency&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Concurrency%20in%20Go%20-%20II%20%e7%ac%ac%e5%9b%9b%e7%ab%a0&url=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fconcurrency-in-go-ii%2f&hashtags=Go%2cGoroutine%2cconcurrency&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -1982,6 +2025,10 @@ for integer := range intStream {
     <ul class="related-ul">
         
         <li>
+          <a href="/posts/concurrency-in-go-i/" class="related__link">Concurrency in Go - I</a>
+        </li>
+        
+        <li>
           <a href="/posts/scheduling-in-go-part-iii/" class="related__link">Scheduling in Go Part III</a>
         </li>
         
@@ -1997,10 +2044,6 @@ for integer := range intStream {
           <a href="/posts/gqlgen/" class="related__link">Gqlgen</a>
         </li>
         
-        <li>
-          <a href="/posts/gc/" class="related__link">垃圾回收！</a>
-        </li>
-        
     </ul>
     
   </section>
@@ -2008,21 +2051,14 @@ for integer := range intStream {
 <nav class="pagination-single">
   
     
-      <a href="https://markogoodman.github.io/posts/gqlgen/" class="pagination-single__left">
+      <a href="https://markogoodman.github.io/posts/concurrency-in-go-i/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Gqlgen</div>      
+        <div class="pagination-single__left-title">Concurrency in Go - I</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://markogoodman.github.io/posts/concurrency-in-go-ii/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Concurrency in Go - II 第四章</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
