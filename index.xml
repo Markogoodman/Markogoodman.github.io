@@ -14,7 +14,7 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 13 Jun 2020 22:46:49 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Mar 2021 20:53:52 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,94 @@
         
       
 
+      
+      <item>
+        <title>Concurrency in Go IV 第六章 Goroutines and the Go runtime</title>
+        <link>https://markogoodman.github.io/posts/concurrency-in-go-iv/</link>
+        <pubDate>Sat, 13 Mar 2021 20:53:52 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sat, 13 Mar 2021 20:53:52 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/concurrency-in-go-iv/</guid>
+        <description>這章節是概略介紹一下 Go 的 scheduler 如何運作的～ 有些事之前有看過 不過 tasks 和 continuation 真的是第一次聽到，滿有趣的概念 Work Stealing Fair scheduling，直接把一堆任務平均</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Go</category>
+            
+          
+            
+              <category>Goroutine</category>
+            
+          
+            
+              <category>concurrency</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+          
+            
+              <category>Concurrency in Go</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Concurrency in Go III  第五章 Concurrency at Scale</title>
+        <link>https://markogoodman.github.io/posts/concurrency-in-go-iii/</link>
+        <pubDate>Sat, 13 Mar 2021 20:52:13 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sat, 13 Mar 2021 20:52:13 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/concurrency-in-go-iii/</guid>
+        <description>筆記都沒啥整理Ｒ Error Propagation // 好像跟 concurrency 比較無關(? 寫 concurrent code 的時候，debug 會比平常難很多，如果互相傳遞資訊時都附上 error 會比較好 Error需要包含一些東</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Go</category>
+            
+          
+            
+              <category>Goroutine</category>
+            
+          
+            
+              <category>concurrency</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+          
+            
+              <category>Concurrency in Go</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Concurrency in Go - II 第四章</title>

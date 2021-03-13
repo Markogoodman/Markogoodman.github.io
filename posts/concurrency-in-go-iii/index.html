@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>垃圾回收！ – Marko</title>
+    <title>Concurrency in Go III  第五章 Concurrency at Scale – Marko</title>
     
 
 
@@ -556,7 +556,7 @@
     
     var baseurl = JSON.parse("\"https://markogoodman.github.io/\"");
     
-    var permalink = JSON.parse("\"https://markogoodman.github.io/posts/gc/\"");
+    var permalink = JSON.parse("\"https://markogoodman.github.io/posts/concurrency-in-go-iii/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -1212,23 +1212,23 @@
 
 
     
-<meta name="description" content="讀垃圾回收的筆記，懶的整理RR" />
+<meta name="description" content="Concurrency in Go 第五章～ Concurrency at Scale " />
 
 
-<meta name="keywords" content="Go,Garbage collection,垃圾回收">
+<meta name="keywords" content="Go,Goroutine,concurrency">
 
-<meta name="created" content="2020-12-16T22:35:13&#43;0800">
-<meta name="modified" content="2020-12-16T22:35:13&#43;0800">
-<meta property="article:published_time" content="2020-12-16T22:35:13&#43;0800">
+<meta name="created" content="2021-03-13T20:52:13&#43;0800">
+<meta name="modified" content="2021-03-13T20:52:13&#43;0800">
+<meta property="article:published_time" content="2021-03-13T20:52:13&#43;0800">
 
 <meta name="author" content="Marko Peng">
 
 
 <meta property="og:site_name" content="Marko">
-<meta property="og:title" content="垃圾回收！">
-<meta property="og:url" content="https://markogoodman.github.io/posts/gc/">
+<meta property="og:title" content="Concurrency in Go III  第五章 Concurrency at Scale">
+<meta property="og:url" content="https://markogoodman.github.io/posts/concurrency-in-go-iii/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="讀垃圾回收的筆記，懶的整理RR">
+<meta property="og:description" content="Concurrency in Go 第五章～ Concurrency at Scale ">
 
 <meta name="generator" content="Hugo 0.79.0" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1239,7 +1239,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://markogoodman.github.io/posts/gc/">
+<link rel="canonical" href="https://markogoodman.github.io/posts/concurrency-in-go-iii/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1253,12 +1253,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "垃圾回收！",
-    "datePublished": "2020-12-16T22:35:13+08:00",
-    "dateModified": "2020-12-16T22:35:13+08:00",
-    "url" : "https://markogoodman.github.io/posts/gc/",
-    "description": "讀垃圾回收的筆記，懶的整理RR",
-    "keywords": ["Go","Garbage collection","垃圾回收"],
+    "headline": "Concurrency in Go III  第五章 Concurrency at Scale",
+    "datePublished": "2021-03-13T20:52:13+08:00",
+    "dateModified": "2021-03-13T20:52:13+08:00",
+    "url" : "https://markogoodman.github.io/posts/concurrency-in-go-iii/",
+    "description": "Concurrency in Go 第五章～ Concurrency at Scale ",
+    "keywords": ["Go","Goroutine","concurrency"],
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://markogoodman.github.io/"
@@ -1526,7 +1526,7 @@
   
   <li  class="is-active" >
     
-      <span>垃圾回收！</span>
+      <span>Concurrency in Go III  第五章 Concurrency at Scale</span>
     
   </li>
   
@@ -1538,13 +1538,13 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">垃圾回收！</h2>
+    <h2 class="single__title" data-ani="true">Concurrency in Go III  第五章 Concurrency at Scale</h2>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Dec 16, 2020 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Mar 13, 2021 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;7&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1558,229 +1558,280 @@
 
   <li><a href="https://markogoodman.github.io/tags/go/" class="single__tag" title="Go">#Go</a></li>
 
-  <li><a href="https://markogoodman.github.io/tags/garbage-collection/" class="single__tag" title="Garbage collection">#Garbage collection</a></li>
+  <li><a href="https://markogoodman.github.io/tags/goroutine/" class="single__tag" title="Goroutine">#Goroutine</a></li>
 
-  <li><a href="https://markogoodman.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/" class="single__tag" title="垃圾回收">#垃圾回收</a></li>
+  <li><a href="https://markogoodman.github.io/tags/concurrency/" class="single__tag" title="concurrency">#concurrency</a></li>
 
 </ul>
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h6 id="tags-golang">tags: <code>Golang</code></h6>
-<h1 id="垃圾回收">垃圾回收～～～</h1>
-<ol>
-<li>追蹤heap裡面的mem</li>
-<li>刪除沒在用的</li>
-<li>保留有在用的</li>
-</ol>
-<p>主要有分兩大類<br />
-一. Reference counting<br />
-每個 obj 記住自己有被多少人連結到，歸零的時候順便回收<br />
-例如：</p>
-<pre><code class="language-python=" data-lang="python=">a = Person(&quot;A&quot;)     // new 一個 Person 的 instance，這個 instance 的 ref count = 1
-b = a       // b 也去指相同的東西 ref count 再 +1
-b = None    // ref count -1
-a = None    // ref count -1 變成 0，記憶體釋放
-</code></pre><br>
-<p>問題：<br />
-circular references</p>
-<pre><code class="language-python=" data-lang="python=">a = Person(&quot;A&quot;)
-b = Person(&quot;B&quot;)
-a.friend = b
-b.friend = a
-a = None
-b = None
-</code></pre><p>雖然已經沒有任何變數直接指到新建的兩個 instance，，但實際上兩個 instance 還是互相 reference，讓 ref count 不會歸零。<br />
-所以只看 ref count 來回收還是有可能 memory leak<br />
-<a href="https://zhuanlan.zhihu.com/p/101781276">https://zhuanlan.zhihu.com/p/101781276</a><br />
-主要有兩種解決法</p>
+      <p>筆記都沒啥整理Ｒ</p>
+<h2 id="error-propagation">Error Propagation</h2>
+<p>// 好像跟 concurrency 比較無關(?</p>
+<p>寫 concurrent code 的時候，debug 會比平常難很多，如果互相傳遞資訊時都附上 error 會比較好</p>
+<p>Error需要包含一些東西:</p>
 <ol>
 <li>
-<p>讓寫程式的人處理<br />
-譬如在 <code>a.friend = b</code> 時，指定這個是 weak pointer，讓它不列入 ref count 的計算。<br />
-好處是程式語言除了 reference counting 就不用做其他事了<br />
-壞處是碼農們沒寫好還是會 mem leak</p>
+<p>發生的事情<br />
+例如硬碟滿了、網路斷線等等。在傳遞途中我們也可以自己包些資訊</p>
 </li>
 <li>
-<p>讓電腦做<br />
-加入一些 tracing GC 來輔助處理這些 circular references 的問題<br />
-下面會再講這是啥～<br />
-好壞處就和上面相反</p>
-</li>
-</ol>
-<p>總結計數的方法</p>
-<p>優點：好做，計數歸零就釋放，不會像 tracing GC 一樣，要找個時間來做 GC 讓程式暫停一陣子，</p>
-<p>缺點：每次都增加減少 count 也會有效能問題，且是不能出錯的東西，甚至要用鎖之類的方法來確保不會有 race condition<br />
-且要額外處理迴圈引用的問題</p>
-<p>二. Tracing: GC 啟動時從 roots 出發，再來找出沒在用的東西然後回收</p>
-<p>可以想像成一個 graph，裡面的 node 是一塊一塊的記憶體，被程式 allocate 來使用，edge 就是 reference</p>
-<p>roots 就是那些我們可以直接存取到的東西 (像是全域變數或是 goroutine stack)，由這些 roots 開始去做圖的 traverse，所有可以從這些 roots<br />
-連接到的東西都是還在使用的，到達不了的 node 就是垃圾</p>
-<p>在這邊也有一種 weak pointer 但和 reference counting 的用法不同，這種 edge 是可以存取一個物件，但不保護這個物件不被回收</p>
-<p>常見名詞：<br />
-Mutator: 改變那些記憶體reference的東西，像是我們的程式就是</p>
-<p>Mutator roots: root set, root objects，可以直接被存取的物件，像是靜態或全域變數、參數、Goroutine stack的其他東西</p>
-<p>Collector: 負責回收垃圾的程式</p>
-<h3 id="copy-gc">Copy GC</h3>
-<p>最原始的垃圾回收</p>
-<p>把全部的記憶體切成兩份，一般時候都是用同一份</p>
-<p>當要收垃圾的時候就是從 roots 出發 traverse，把不是垃圾的東西複製到另一份，然後原本的那一份就可以清空了（當作垃圾，不用真的清）</p>
-<p>文章可以參考這個：https://zhuanlan.zhihu.com/p/28197216</p>
-<p>Traverse 和複製時要注意的就是指標的值也要順便更新</p>
-<p>缺點是空間要用很多</p>
-<p>不過複製的時候可以順便讓記憶體更 compact 是好處</p>
-<h3 id="基本的-mark-and-sweep">基本的 Mark and Sweep</h3>
-<p><a href="https://liujiacai.net/blog/2018/07/08/mark-sweep/">https://liujiacai.net/blog/2018/07/08/mark-sweep/</a><br />
-就是簡單的收垃圾XD<br />
-網路上很多 pseudo code 可以看</p>
-<ol>
-<li>先把其他在做的事情都停住 (Stop the world)</li>
-<li>從 roots 出發把有用到的東西 mark 起來</li>
-<li>掃過 heap 所有的物件，把沒用的清除</li>
-<li>恢復運作</li>
-</ol>
-<p>簡單可以發現問題點，有記憶體碎片、掃過整個 heap 很慢、要停止所有東西</p>
-<p><a href="https://stackoverflow.com/questions/23057531/what-are-the-advantages-and-disadvantages-of-having-mark-bits-together-and-separ">https://stackoverflow.com/questions/23057531/what-are-the-advantages-and-disadvantages-of-having-mark-bits-together-and-separ</a><br />
-優化<br />
-Bitmap marking： 用 bitmap 來紀錄哪些 object 是被 mark 住的<br />
-Lazy sweep：allocate 時才去做清垃圾，而且只清剛好需要的空間就好，平常只做標記</p>
-<h3 id="mark-compact">Mark-Compact</h3>
-<p>先把還有在用的標記起來然後 compact<br />
-<a href="https://en.wikipedia.org/wiki/Mark-compact_algorithm">https://en.wikipedia.org/wiki/Mark-compact_algorithm</a><br />
-目的就是要把還在使用的記憶體聚集在一起，減少記憶體碎片，碎片多就是母湯</p>
-<p>常見的做法就是掃過 heap，然後把每個 obj 往邊邊移動就好<br />
-wikipedia裡面介紹了兩種方法</p>
-<h4 id="table-based">Table-based</h4>
-<p>是需要掃過記憶體兩次，第一次掃過時要用一個 break table 記住每個 obj 原本的位置還有預計要移動到的位置，然後就將該 obj 移動<br />
-第二個 pass 是要用 break table 調整這些 obj 裡面的 pointer</p>
-<p>Break table 也是存在同一個 heap 內，搬移的時候可能會卡到，table 打散要重新排序(???)</p>
-<h4 id="lisp2-algorithm">LISP2 algorithm</h4>
-<p>是一個簡單多的演算法<br />
-要 3 個 pass</p>
-<ol>
-<li>算出來每個 obj 預計會到哪</li>
-<li>更新每個 obj 指出去的 pointer</li>
-<li>移動~<br />
-其中第一步預計要移動去哪的資訊會存在各自 obj 中</li>
-</ol>
-<h2 id="incremental-gc">Incremental GC</h2>
-<p><a href="https://liujiacai.net/blog/2018/08/04/incremental-gc/#%E5%A2%9E%E9%87%8F%E5%BC%8F-GC-%E6%80%9D%E8%B7%AF">https://liujiacai.net/blog/2018/08/04/incremental-gc/#%E5%A2%9E%E9%87%8F%E5%BC%8F-GC-%E6%80%9D%E8%B7%AF</a></p>
-<p><a href="https://segmentfault.com/a/1190000022030353">https://segmentfault.com/a/1190000022030353</a></p>
-<p><a href="https://titanwolf.org/Network/Articles/Article?AID=786c12ef-88b2-42da-984a-41ef4b5669d1#gsc.tab=0">https://titanwolf.org/Network/Articles/Article?AID=786c12ef-88b2-42da-984a-41ef4b5669d1#gsc.tab=0</a><br />
-不一次做完整個垃圾回收的動作 (其實 ref counting 就類似，但缺點不少)，每次停頓小(最重要的優點)，但 throughpu 會降低就是了</p>
-<p>mark 的階段會被分成很多次</p>
-<h3 id="三色標記法tricolor-marking">三色標記法（tricolor marking）</h3>
-<p>一樣從 roots 出發去 traverse 整個 obj graph，過程中會將 obj 們標成不同顏色<br />
-一開始 roots 都是灰色，其餘白色</p>
-<p>黑：可以到達，且該節點的子節點都看過了<br />
-灰：可以到達，還沒去檢查該節點的子節點們<br />
-白：還沒到達，如果 mark 結束都還是白色就會被當作垃圾</p>
-<p>標記階段可以被中斷，下次要開始時可以從灰色的子節點開始檢查<br />
-直到沒有灰色節點時就完成 mark 階段<br />
-灰色是用來記錄 mark 中斷後，又被 mutator 改變狀態的節點<br />
-新建的 obj 依照不同的方法會設為不同顏色</p>
-<p>然而在標記階段中斷後再次開始前，我們的程式(mutator)可能會去改變這些 obj 之間的 reference，以下圖為例 (從上面網站抓來的)</p>
-<p><img src="https://i.imgur.com/nzjaiSc.png" alt="" /></p>
-<p>改變後可能造成黑A直接 ref 到白D，下次 mark 再開始後因為 A 是黑色，導致 D 不會被掃到，誤當成垃圾</p>
-<h4 id="tricolor-invvariant">Tricolor invvariant</h4>
-<p>為了避免上述的情況發生，三色標記法限制了節點的顏色與 reference 的關係<br />
-下面兩種只要其中一種滿足即可</p>
-<p>Strong Invariant: 黑色不可直接指到白色，上面那種情況我們不會再去檢查黑點的子節點，導致戊收垃圾</p>
-<p>Weak Invariant: 黑可以直接指到白色，但這個白色必須是某個灰色節點的直接或間接後代</p>
-<p>參考圖 <a href="https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-garbage-collector/">https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-garbage-collector/</a><br />
-<img src="https://i.imgur.com/NQelk48.png" alt="" /></p>
-<p>D 在右圖是 B 的後代，所以允許 A 直接 reference</p>
-<p>接下來就是當 mutator 在運作時，我們如何維持上述其中一種 invariant 了<br />
-在我們的程式 (mutator) 做事情時，需要插入一些 collector 的動作</p>
-<ol>
-<li>
-<p>read barrier<br />
-顧名思義讀資料的時候插入動作，防止 mutator 去讀白色的 obj</p>
-<p>讀白色 obj 時就把它標成灰色<br />
-例：上面那個 Figure 7 在讀 D 的時候就把 D 塗成灰色</p>
-<p>可以保證上面的 strong invariant</p>
+<p>時間與地點<br />
+要記錄發生的時間<br />
+要包含完整的 stack trace<br />
+還有上下文(這個不太有想像)，例如分散式系統，要知道是哪個機器出錯</p>
 </li>
 <li>
-<p>write barrier</p>
+<p>顯示用訊息<br />
+給使用者看的，不包含 stack trace 這類太詳細的資訊<br />
+類似前面兩點的精簡版</p>
+</li>
+<li>
+<p>error id<br />
+讓看到顯示用訊息的使用者可以找到詳細資訊</p>
 </li>
 </ol>
-<p><a href="https://www.mdeditor.tw/pl/prRu/zh-tw">https://www.mdeditor.tw/pl/prRu/zh-tw</a><br />
-<a href="https://www.mdeditor.tw/pl/pFz3/zh-tw">https://www.mdeditor.tw/pl/pFz3/zh-tw</a><br />
-寫資料時插入動作，基本的有兩種<br />
-stack太多，如果開write barrier會很慢，通常只開heap，所以以下兩種方法需要再開始或結束時掃一次stack來處理，預防有白色被已掃過的stack指到</p>
-<pre><code>a. insert write barrier (dijkstra)
-當 mutator 把黑色指向白色時，會將白色變成灰色，或者把黑色變成灰色 (前者好像比較常見)
-如此一來就符合 strong invariant 了～
-mark結束後要再掃一次stack，因為stack沒開wb，指到的東西可能是白色卻需要存活
+<p>這些資訊大多都要我們自己包，一般的 error 無</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">High</span><span class="p">(</span><span class="nx">param</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+    <span class="nx">result</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">Low</span><span class="p">.</span><span class="nf">Do</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+         <span class="c1">// 檢查資訊是否有包完整，基本上都要包，逃過檢查的就是沒包好
+</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">err</span><span class="p">.(</span><span class="nx">Low</span><span class="p">.</span><span class="nx">Error</span><span class="p">);</span> <span class="nx">ok</span> <span class="p">{</span> 
+            <span class="nx">err</span> <span class="p">=</span> <span class="nf">WrapErr</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="s">&#34;cannot do High id:%v&#34;</span><span class="p">,</span> <span class="nx">param</span><span class="p">)</span> 
+            <span class="c1">// 會不會使用 defer 包比較好啊? 就不用在每個 func call 都包一次，dup code
+</span><span class="c1"></span>        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">err</span>
+    <span class="p">}</span>
+    <span class="c1">// ...
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>通常只在 module boundaries(像是public function/method) WrapErr<br />
+在最上層時，如果發現不是自製的 error，就輸出 default 訊息，如果是的話就直接輸出 err.Message 即可。但兩個都要記得輸出 error id</p>
+<p>以下是課本上 p. 151 舉的例子</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">MyError</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Inner</span> <span class="kt">error</span> 
+    <span class="nx">Message</span> <span class="kt">string</span>
+    <span class="nx">StackTrace</span> <span class="kt">string</span>
+    <span class="nx">Misc</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}</span>
+<span class="p">}</span>
 
-b. delete write barrier (Yuasa)
-若有一個指針指向一個 obj 且該 obj 為白或灰
-當 mutator 此指針拿掉時，該 obj 要被塗成灰色
+<span class="kd">func</span> <span class="nf">wrapError</span><span class="p">(</span><span class="nx">err</span> <span class="kt">error</span><span class="p">,</span> <span class="nx">messagef</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">msgArgs</span> <span class="o">...</span><span class="kd">interface</span><span class="p">{})</span> <span class="nx">MyError</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">MyError</span><span class="p">{</span>
+        <span class="nx">Inner</span><span class="p">:</span> <span class="nx">err</span><span class="p">,</span> <span class="c1">// 完整的底層資訊
+</span><span class="c1"></span>        <span class="nx">Message</span><span class="p">:</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="nx">messagef</span><span class="p">,</span> <span class="nx">msgArgs</span><span class="o">...</span><span class="p">),</span> <span class="c1">// 顯示用，會把下層的 err.Message 藏起來
+</span><span class="c1"></span>        <span class="nx">StackTrace</span><span class="p">:</span> <span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()),</span> 
+        <span class="nx">Misc</span><span class="p">:</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}),</span> <span class="c1">// 雜亂資訊放這
+</span><span class="c1"></span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="timeouts-and-cancellation">Timeouts and Cancellation</h2>
+<p>為何想要 timeout？<br />
+很邊緣的 req 可能會想要讓他 timeout 而不是讓他等超久<br />
+何時適合 timeout？</p>
+<ol>
+<li>to後不會一直重複來（造成negative feedback loop）</li>
+<li>沒有資源去儲存此 req，像是 queue 滿了之類</li>
+<li>req 會過時，等很久換到它時候，已經處理也沒意義</li>
+<li>預防 deadlock，死結也時常會發生在程式執行一段時間後，測試時不一定抓得到。死結時通常只能重啟機器，換成 timeout 雖然有可能也是活結，但至少發現後可修，不是直接爆炸</li>
+</ol>
+<p>何時想取消？</p>
+<ol>
+<li>上面那些情況</li>
+<li>使用者想取消</li>
+<li>parent 如果停止了，該 concurrent op 也要取消</li>
+<li>Replicated requests，某些情況下(p. 159)為了效能，可能會收到兩個一樣的 req，一個完成後，其他取消</li>
+</ol>
+<p>簡單範例<br />
+G -&gt; A -&gt; B<br />
+當 A 沒效率時可能會開啟 A2<br />
+如此 B 可能收到重複的</p>
+<p>一個 op 取消時，其餘的相關 op 該怎麼辦（正在執行的東西或其他子op等等等）<br />
+一個可能會被取消的 op 底下會呼叫到的子 op 都必須檢查，這些 op 如果執行時間超出取消後可以等待的範圍，那就必須把這些 op 做成 preemptable</p>
+<p>簡單處理 Replicated requests 方式就是當子 goroutine 回報結果後，要把往另一個重複的 req 送取消指令（但這就需要雙向溝通）<br />
+或是不處理，或要求 parent permission(A要送給B時問G同意)</p>
+<p>timeout和取消是程式完成後很難加入的，要一開始就考慮</p>
+<h2 id="heartbeat">Heartbeat</h2>
+<p>讓別人知道你活著，比較常見的是一個 server 開一個 endpoint 讓別人知道 server 掛了沒<br />
+這邊的 heartbeat 是一個 goroutine 要回傳一個 heartbeat chan，定時傳東西出去表示自己沒掛<br />
+直接把 p. 162 的例子摳逼上來</p>
+<pre><code>doWork := func(
+		done &lt;-chan interface{},
+		pulseInterval time.Duration,
+	) (&lt;-chan interface{}, &lt;-chan time.Time) {
+		heartbeat := make(chan interface{})
+		results := make(chan time.Time)
+		go func() {
+			defer close(heartbeat)
+			defer close(results)
+			pulse := time.Tick(pulseInterval)
+			workGen := time.Tick(2 * pulseInterval)
+			sendPulse := func() {
+				select {
+				case heartbeat &lt;- struct{}{}:
+				default:
+				}
+			}
+			sendResult := func(r time.Time) {
+				for {
+					select {
+					case &lt;-done:
+						return
+					case &lt;-pulse:
+						sendPulse()
+					case results &lt;- r:
+						return
+					}
+				}
+			}
+			for {
+				select {
+				case &lt;-done:
+					return
+				case &lt;-pulse:
+					sendPulse()
+				case r := &lt;-workGen:
+					sendResult(r)
+				}
+			}
+		}()
+		return heartbeat, results
+	}
+</code></pre><p>要注意的是傳東西去 chan 都可能會被卡住包括 heartbeat，所以都使用 select 預防，且送 result 中間可能有多個心跳，所以要用 for 包住 (常常忘記)</p>
+<p>使用上可以在 for 裡面包 select heartbeat, result, time.After(timeout) 這幾個 case，如果太久沒聽到 heartbeat 或 result 就掛掉</p>
+<h2 id="replicated-requests">Replicated Requests</h2>
+<p>就是同時會有多個處理 request 的單元（機器、process、goroutine 都有可能），丟一樣的 req 給他們，拿最快的回應來使用</p>
+<h2 id="rate-limiting">Rate limiting</h2>
+<p><a href="https://www.alexedwards.net/blog/how-to-rate-limit-http-requests">https://www.alexedwards.net/blog/how-to-rate-limit-http-requests</a><br />
+預防 rate 太高造成系統壞掉。<br />
+可能是攻擊，或是系統設計上本來就沒考慮到高 rate 的情況<br />
+或是之前說的 negative feedback loop 等等等<br />
+甚至對不同使用者（例如有無付費）設定不同的限制</p>
+<p>可以先將系統能接受的 request 數量限制在自己已知可掌控的範圍內</p>
+<p>不只服務提供方可以設置 rate limit，如果客戶使用需要付費的服務，那幫自己設 rate limit 也合理</p>
+<p>常用的方法叫做 token bucket，要使用資源就必須持有 token，要去桶子裡拿。桶子裡最多可以有 d 個 token，每秒會補充 r 個 token 回去桶子。</p>
+<p>golang.org/x/time/rate package 實作了 token bucket</p>
+<pre><code class="language-=go" data-lang="=go">func NewLimiter(r Limit, b int) *Limiter // 還有一些 function 可以幫忙產生r，像是 Every(duration) 可以自動轉成 r
 
-一開始需要掃roots，把roots直接指到的都塗灰
-為何需要開始時掃stack-
-http://www.yuasa.kuis.kyoto-u.ac.jp/~yuasa/ilc2002/slide.pdf
-因為stack沒開rb，如果有一個root在stack上，若他直接指到某個obj，且這個pointer在這個obj被看到前，就被移除，那此obj可能被另外的黑色指到，就還是白色卻需要存活
-</code></pre>
-<p>一般來說 write barrier 的效率會比較好，因為 heap 讀比寫多很多</p>
-<h2 id="generational-gc">Generational GC</h2>
-<p><a href="https://liujiacai.net/blog/2018/08/18/generational-gc/">https://liujiacai.net/blog/2018/08/18/generational-gc/</a><br />
-分代，大部分的東西剛創建不久就會變成垃圾，所以把年輕和老的物件分開存<br />
-年輕的部分常常做ＧＣ，老的偶爾做</p>
-<p>通常年輕的 obj 多，老的少<br />
-young -&gt; old 的 pointer 比 old -&gt; young 多</p>
-<ul>
-<li>不動到 old，獨立回收 young 部分<br />
-考慮到 old -&gt; young 的 pointer<br />
-可以新增 write barrier 做一些操作，當 old 指到 young 時就記住，把被指到的 young 當作 young gc 時的 root</li>
-</ul>
-<p>若該 old 是變成垃圾，則 young 會暫時成為實際上是垃圾的 root<br />
-所以下次老 gc 時要清掉</p>
-<ul>
-<li>獨立回收 old<br />
-要考慮到 young -&gt; old 的 pointer<br />
-可以依照上面的方法來做，但通常 young -&gt; old 的 pointer 數量較多<br />
-要記錄的東西會很多，可以直接把所有 young 當作 root set，反正不多</li>
-</ul>
-<h1 id="go-gc">Go GC</h1>
-<p>一開始適用插入屏障後來改用混合型，結合插入和刪除寫屏障，去除了開頭或結束時的 scan</p>
-<p>介紹怎麼讓 Go gc 更有效率<br />
-<a href="https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html">https://www.ardanlabs.com/blog/2018/12/garbage-collection-in-go-part1-semantics.html</a></p>
-<p><a href="https://golangpiter.com/system/attachments/files/000/001/718/original/GP_2019_-_An_Insight_Into_Go_Garbage_Collection.pdf?1572419303">https://golangpiter.com/system/attachments/files/000/001/718/original/GP_2019_-_An_Insight_Into_Go_Garbage_Collection.pdf?1572419303</a><br />
-<img src="https://i.imgur.com/scbHmvH.png" alt="" /></p>
-<p><a href="https://www.mdeditor.tw/pl/prRu/zh-tw">https://www.mdeditor.tw/pl/prRu/zh-tw</a><br />
-<a href="https://www.mdeditor.tw/pl/pFz3/zh-tw">https://www.mdeditor.tw/pl/pFz3/zh-tw</a></p>
-<p>&quot;&quot; 引用上面文章的段落<br />
-在Go 語言 v1.7 版本之前，使用的是 Dijkstra 插入寫屏障保證強三色不變性，但是執行時並沒有在所有的垃圾收集根物件上開啟插入寫屏障。因為 Go 語言的應用程式可能包含成百上千的 goroutine，而垃圾收集的根物件一般包括全域性變數和棧物件，如果執行時需要在幾百個 goroutine 的棧上都開啟寫屏障，會帶來巨大的額外開銷，所以 Go 團隊在實現上選擇了在標記階段完成時暫停程式、將所有棧物件標記為灰色並重新掃描，在活躍 goroutine 非常多的程式中，重新掃描的過程需要佔用 10 ~ 100ms 的時間<br />
-&quot;&quot;</p>
-<p><a href="https://studygolang.com/articles/27243">https://studygolang.com/articles/27243</a></p>
-<h3 id="hybrid-write-barrier">Hybrid write barrier</h3>
-<p><a href="https://github.com/golang/proposal/blob/master/design/17503-eliminate-rescan.md">https://github.com/golang/proposal/blob/master/design/17503-eliminate-rescan.md</a></p>
-<p>可以看 Proposal 和 Reasoning，有介紹為何他們可以消除開頭或結尾的掃描</p>
-<pre><code>writePointer(slot, ptr):
-    shade(*slot)
-    if current stack is grey:   
-        shade(ptr)
-    *slot = ptr
-</code></pre><pre><code>奇怪的例子
-A-&gt;B
-C-&gt;nil
+func (lim *Limiter) Wait(ctx context.Context) (err error)// 等於 lim.WaitN(ctx, 1)，
 
-都在 AC 都在 stack 上，若C黑，AB白
-當變成
-A -&gt; nil
-C -&gt; B
-時，因為是stack 所以wb都不會啟動？
+func (lim *Limiter) WaitN(ctx context.Context, n int)  // block 直到擁有 n 個 token，會去檢查 ctx 的死線和是否取消了
 
-B會被誤刪嗎
-</code></pre><p>這裡說當混合寫屏障時，在掃描特定一個goroutine上的stack時還是要暫停，一次掃完(所以上面那種情況不會出現)<br />
-但不用像Yuasa一開始把全部stack掃完或是Dijkstra最後重掃<br />
-<a href="https://liqingqiya.github.io/golang/gc/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/%E5%86%99%E5%B1%8F%E9%9A%9C/2020/07/24/gc5.html">https://liqingqiya.github.io/golang/gc/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/%E5%86%99%E5%B1%8F%E9%9A%9C/2020/07/24/gc5.html</a></p>
-<p>其餘連結<br />
-<a href="https://mcll.top/2020/04/14/gc-write-barrier/">https://mcll.top/2020/04/14/gc-write-barrier/</a><br />
-<a href="https://www.bookstack.cn/read/qcrao-Go-Questions/spilt.3.GC-GC.md">https://www.bookstack.cn/read/qcrao-Go-Questions/spilt.3.GC-GC.md</a></p>
-<p>原始碼<br />
-<a href="https://go.googlesource.com/go/+/go1.7beta2/src/runtime/mbarrier.go">https://go.googlesource.com/go/+/go1.7beta2/src/runtime/mbarrier.go</a></p>
+
+使用範例
+lim := rate.NewLimiter(rate.Limit(1), 1)
+func XXX(ctx context.Context) error {
+   if err != lim.Wait(ctx); err != nil{
+      return err 
+   }
+
+}
+
+</code></pre><p>也可以把一堆 limiter 包起來，用來做一個有各種不同限制的 limiter，例如把 disk limiter、network limiter、 second limiter(每秒限制)、minute limiter(每分鐘限制)<br />
+在用 for 迴圈去跑需要啟動的 limiter</p>
+<p>範例，書上還有一些優化，不過大致概念是這樣</p>
+<pre><code class="language-=go" data-lang="=go">// 讓 MultiLimiter 接收 interface，如此一來不止可以接收原生 Go limiter，也可以接收 multiLimiter，包好幾層
+type RateLimiter interface{
+    Wait(context.Context) error
+}
+
+type multiLimiter struct { 
+    limiters []RateLimiter
+}
+
+func MultiLimiter(limiters ...RateLimiter) *multiLimiter{
+    return &amp;multiLimiter{limiters: limiters}
+}
+
+func (lim *multiLimiter) Wait(ctx context.Context) error{
+    for _, l := range lim.limiters {
+        if err := l.Wait(ctx); err != nil{
+            return err
+        }
+    }
+    return nil
+}
+
+使用上可以在不同的 func 裡面去戳自己想要用的 limiter
+type XXX struct {
+    ALimiter, 
+    BLimiter, 
+    CLimiter, 
+}
+func (x *XXX) DoSomething (ctx context.Context) error {
+    err := MultiLimiter(x.ALimiter, x.BLimiter).Wait(ctx)
+    .....
+}
+
+</code></pre><p>詳細請參考 p.183</p>
+<p>補一些書上沒有的用法</p>
+<pre><code class="language-=go" data-lang="=go">func (lim *Limiter) Allow() bool  // 等於 AllowN(time.Now(), 1)
+func (lim *Limiter) AllowN(now time.Time, n int) bool // 回傳 now 的時候桶子裡面有沒有 n 個 token，如果有會回傳 true 並消耗掉
+
+
+func (lim *Limiter) Reserve() *Reservation // ReserveN(time.Now(), 1)
+func (lim *Limiter) ReserveN(now time.Time, n int) *Reservation 
+預約 n 個 token，會先把 limiter 裡面的 token 先卡住
+r.OK() // 有沒有可能等到 n 個token
+r.Delay() // 多久才可以得到 n 個 
+r.Cancel() // 取消預約
+
+// package 註解的用法
+//   r := lim.ReserveN(time.Now(), 1)
+//   if !r.OK() {
+//     // Not allowed to act! Did you remember to set lim.burst to be &gt; 0 ?
+//     return
+//   }
+//   time.Sleep(r.Delay())
+//   Act()
+
+
+func (lim *Limiter) SetLimit(newLimit Limit)
+func (lim *Limiter) SetBurst(newBurst int) 
+</code></pre><h2 id="healing-unhealthy-goroutines">Healing Unhealthy Goroutines</h2>
+<p>會活很久的 process 中通常也會有一些一直都活著的 goroutine，等待資料來，處理，回應。總之他們很有可能會掛掉（？ 需要一些方法來復活他們</p>
+<p>這章節的 code 也太長了ㄅ<br />
+基本上就是要跑起另一個 goroutine 去偵測目標的 heartbeat，當不正常時，就傳 done 給目標，然後重啟一個</p>
+<h2 id="summary">Summary</h2>
+<p>這章主要是在說要怎麼讓系統穩定點<br />
+滿多主題的觀念也不只限定在 Go 的 concurrency 上</p>
 
     </article>
     
@@ -1842,13 +1893,13 @@ B會被誤刪嗎
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fgc%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fconcurrency-in-go-iii%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=%e5%9e%83%e5%9c%be%e5%9b%9e%e6%94%b6%ef%bc%81&url=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fgc%2f&hashtags=Go%2cGarbage%20collection%2c%e5%9e%83%e5%9c%be%e5%9b%9e%e6%94%b6&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Concurrency%20in%20Go%20III%20%20%e7%ac%ac%e4%ba%94%e7%ab%a0%20Concurrency%20at%20Scale&url=https%3a%2f%2fmarkogoodman.github.io%2fposts%2fconcurrency-in-go-iii%2f&hashtags=Go%2cGoroutine%2cconcurrency&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -1977,15 +2028,19 @@ B會被誤刪嗎
     <ul class="related-ul">
         
         <li>
+          <a href="/posts/concurrency-in-go-ii/" class="related__link">Concurrency in Go - II 第四章</a>
+        </li>
+        
+        <li>
+          <a href="/posts/concurrency-in-go-i/" class="related__link">Concurrency in Go - I</a>
+        </li>
+        
+        <li>
           <a href="/posts/scheduling-in-go-part-iii/" class="related__link">Scheduling in Go Part III</a>
         </li>
         
         <li>
           <a href="/posts/scheduling-in-go-part-ii/" class="related__link">Scheduling in Go Part II</a>
-        </li>
-        
-        <li>
-          <a href="/posts/go-map/" class="related__link">Go 的 MAP 要不要用指標</a>
         </li>
         
         <li>
@@ -1999,17 +2054,17 @@ B會被誤刪嗎
 <nav class="pagination-single">
   
     
-      <a href="https://markogoodman.github.io/posts/csrf/" class="pagination-single__left">
+      <a href="https://markogoodman.github.io/posts/concurrency-in-go-ii/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Csrf</div>      
+        <div class="pagination-single__left-title">Concurrency in Go - II 第四章</div>      
       </a>
     
     <div class="grow"></div>
     
-      <a href="https://markogoodman.github.io/posts/gqlgen/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Gqlgen</div>
+      <a href="https://markogoodman.github.io/posts/concurrency-in-go-iv/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Concurrency in Go IV 第六章 Goroutines and the Go runtime</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
