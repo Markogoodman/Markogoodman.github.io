@@ -4,7 +4,6 @@
   
   <url>
     <loc>https://markogoodman.github.io/categories/</loc>
-<<<<<<< HEAD
     <lastmod>2021-04-12T23:44:15+08:00</lastmod>
   </url>
   
@@ -36,9 +35,6 @@
   <url>
     <loc>https://markogoodman.github.io/posts/what-is-http/</loc>
     <lastmod>2021-04-12T23:40:36+08:00</lastmod>
-=======
-    <lastmod>2021-03-13T20:53:52+08:00</lastmod>
->>>>>>> 3594565d66b9b5d419bdb40ec79b92332b74486c
   </url>
   
   <url>
@@ -64,19 +60,6 @@
   <url>
     <loc>https://markogoodman.github.io/tags/goroutine/</loc>
     <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-<<<<<<< HEAD
-=======
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/</loc>
-    <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/</loc>
-    <lastmod>2021-03-13T20:53:52+08:00</lastmod>
->>>>>>> 3594565d66b9b5d419bdb40ec79b92332b74486c
   </url>
   
   <url>
@@ -85,29 +68,11 @@
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>https://markogoodman.github.io/posts/concurrency-in-go-iii/</loc>
     <lastmod>2021-03-13T20:52:13+08:00</lastmod>
   </url>
   
   <url>
-=======
-    <loc>https://markogoodman.github.io/tags/</loc>
-    <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
-    <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/concurrency-in-go-iii/</loc>
-    <lastmod>2021-03-13T20:52:13+08:00</lastmod>
-  </url>
-  
-  <url>
->>>>>>> 3594565d66b9b5d419bdb40ec79b92332b74486c
     <loc>https://markogoodman.github.io/posts/concurrency-in-go-ii/</loc>
     <lastmod>2021-02-28T22:32:38+08:00</lastmod>
   </url>
@@ -224,6 +189,11 @@
   
   <url>
     <loc>https://markogoodman.github.io/about/</loc>
+    <lastmod>2020-06-13T22:46:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/</loc>
     <lastmod>2020-06-13T22:46:49+08:00</lastmod>
   </url>
   

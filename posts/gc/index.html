@@ -1230,7 +1230,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="讀垃圾回收的筆記，懶的整理RR">
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1750,9 +1750,9 @@ young -&gt; old 的 pointer 比 old -&gt; young 多</p>
 <img src="https://i.imgur.com/scbHmvH.png" alt="" /></p>
 <p><a href="https://www.mdeditor.tw/pl/prRu/zh-tw">https://www.mdeditor.tw/pl/prRu/zh-tw</a><br />
 <a href="https://www.mdeditor.tw/pl/pFz3/zh-tw">https://www.mdeditor.tw/pl/pFz3/zh-tw</a></p>
-<p>&quot;&quot; 引用上面文章的段落<br />
+<p>&quot;&rdquo; 引用上面文章的段落<br />
 在Go 語言 v1.7 版本之前，使用的是 Dijkstra 插入寫屏障保證強三色不變性，但是執行時並沒有在所有的垃圾收集根物件上開啟插入寫屏障。因為 Go 語言的應用程式可能包含成百上千的 goroutine，而垃圾收集的根物件一般包括全域性變數和棧物件，如果執行時需要在幾百個 goroutine 的棧上都開啟寫屏障，會帶來巨大的額外開銷，所以 Go 團隊在實現上選擇了在標記階段完成時暫停程式、將所有棧物件標記為灰色並重新掃描，在活躍 goroutine 非常多的程式中，重新掃描的過程需要佔用 10 ~ 100ms 的時間<br />
-&quot;&quot;</p>
+&quot;&rdquo;</p>
 <p><a href="https://studygolang.com/articles/27243">https://studygolang.com/articles/27243</a></p>
 <h3 id="hybrid-write-barrier">Hybrid write barrier</h3>
 <p><a href="https://github.com/golang/proposal/blob/master/design/17503-eliminate-rescan.md">https://github.com/golang/proposal/blob/master/design/17503-eliminate-rescan.md</a></p>
