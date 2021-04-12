@@ -1230,7 +1230,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="系列文之二， Goroutine 的是怎麼調度的與 GMP model">
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.79.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1571,7 +1571,7 @@
 <h1 id="part-ii-go-scheduler">Part II: Go Scheduler</h1>
 <p>這部分要開始介紹 Go 的 Scheduler 是怎麼運作的，以及它的優勢在哪裡</p>
 <p>在 Go 裡面執行 runtime.NumCPU() 可以知道目前的電腦有幾個 virtual core (看有幾個cpu、各有幾個核心、核心上有幾個hardware thread)，這也是你的電腦最多可以平行執行的任務數量 (Part I 提到過)。</p>
-<p>用 runtime.GOMAXPROCS(n) 可以設定 Go 給予 n 個 &lsquo;P&rsquo;, logical processor，設定 Go 可以'邏輯上'平行執行的任務數量 (也就是要有幾個 active thread)。<br />
+<p>用 runtime.GOMAXPROCS(n) 可以設定 Go 給予 n 個 &lsquo;P&rsquo;, logical processor，設定 Go 可以&rsquo;邏輯上&rsquo;平行執行的任務數量 (也就是要有幾個 active thread)。<br />
 當 P 的數量大於前面 runtime.NumCPU() 數量，這些 P 就可能要常常交換使用 core 造成 context switch 負擔。</p>
 <p>如Part I所說，如果執行中的 thread 太少就無法利用全部的 core，太多的話這些 thread 會需要做 context switch 減慢速度。所以 Go 就把預設值設為 runtime.NumCPU()的數量。<br />
 但在很少數的情況下 GOMAXPROCS 設高反而可以增加一點效能，參考 <a href="https://colobu.com/2017/10/11/interesting-things-about-GOMAXPROCS/">https://colobu.com/2017/10/11/interesting-things-about-GOMAXPROCS/</a></p>
