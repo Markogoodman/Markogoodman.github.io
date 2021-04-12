@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>http on Marko</title>
+    <link>https://markogoodman.github.io/tags/http/</link>
+    <description>Recent content in http on Marko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
+    <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
+    <copyright>©{2020}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 12 Apr 2021 23:44:15 +0800</lastBuildDate>
+    
+        <atom:link href="https://markogoodman.github.io/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>What Is Websocket</title>
+        <link>https://markogoodman.github.io/posts/what-is-websocket/</link>
+        <pubDate>Mon, 12 Apr 2021 23:44:15 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Mon, 12 Apr 2021 23:44:15 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/what-is-websocket/</guid>
+        <description>Websocket https://www.cnblogs.com/nuccch/p/10947256.html#websocket%E5%8D%8F%E8%AE%AE%E6%98%AF%E4%BB%80%E4%B9%88 是一個應用層的 protocol (跟 http 同層) 最重要的功用大概就是雙向傳輸，建立連線後就把連線開著，client 和 server 之間都可以互相傳訊息，且 overhead 比 http 少 http 傳送</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>http</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>What Is Http</title>
+        <link>https://markogoodman.github.io/posts/what-is-http/</link>
+        <pubDate>Mon, 12 Apr 2021 23:40:36 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Mon, 12 Apr 2021 23:40:36 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/what-is-http/</guid>
+        <description>HTTP 們 HTTP https://notfalse.net/39/http-message-format HyperText Transfer Protocol 一種應用層的通訊協定 簡單來說就是應用程式之間的一種溝通規範，規定好大家資料格式長什麼樣子，互相該如何來回訊息。如果大家都依照這</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>http</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
