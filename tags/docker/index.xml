@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>docker on Marko</title>
+    <link>https://markogoodman.github.io/tags/docker/</link>
+    <description>Recent content in docker on Marko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
+    <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
+    <copyright>©{2020}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 25 Apr 2021 16:12:26 +0800</lastBuildDate>
+    
+        <atom:link href="https://markogoodman.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Docker</title>
+        <link>https://markogoodman.github.io/posts/docker/</link>
+        <pubDate>Sun, 25 Apr 2021 16:12:26 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sun, 25 Apr 2021 16:12:26 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/docker/</guid>
+        <description>Docker https://www.youtube.com/watch?v=3c-iBn73dDE 前幾天看了一個簡單介紹 docker 的影片還滿完整的，紀錄一下大概講了什麼，沒有太深入的東西不過應該滿夠用的 他裡面有做了一個簡單的範例，之後要用應該</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>docker</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

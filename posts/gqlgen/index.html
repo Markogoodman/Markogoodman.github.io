@@ -1230,7 +1230,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="gqlgen! 簡單紀錄一下">
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.79.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1732,7 +1732,7 @@ func (r *todoResolver) Related(ctx context.Context, obj *model.Todo, count int) 
       }
     }
 }
-</code></pre><p>會出現 message&rdquo;: &ldquo;operation has complexity 7, which exceeds the limit of 5&rdquo;<br />
+</code></pre><p>會出現 message&quot;: &ldquo;operation has complexity 7, which exceeds the limit of 5&rdquo;<br />
 這是因為預設一個 field 和一層深度都會 complexity + 1<br />
 這邊共有 7 個 complexity (todos, id, text, done, related, id, text)</p>
 <p>但也可以發現count不管改成多少complexity都不會變<br />
