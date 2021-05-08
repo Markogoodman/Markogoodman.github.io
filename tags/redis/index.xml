@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Redis on Marko</title>
+    <link>https://markogoodman.github.io/tags/redis/</link>
+    <description>Recent content in Redis on Marko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
+    <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
+    <copyright>©{2020}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 09 May 2021 00:06:32 +0800</lastBuildDate>
+    
+        <atom:link href="https://markogoodman.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Redis Transaction 使用</title>
+        <link>https://markogoodman.github.io/posts/redis-transaction/</link>
+        <pubDate>Sun, 09 May 2021 00:06:32 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sun, 09 May 2021 00:06:32 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/redis-transaction/</guid>
+        <description>Redis transaction 工作時有需要做一個 Set if key exists 發現 redis 只提供一個 SETNX，Set if key doesn&amp;rsquo;t exist 順便來研究一下 redis 的 transaction MULTI https://redis.io/topics/transactions 在 redis 裡面做 transaction 基本上就是使用 MULTI MULTI SET key0 value0 SET key1 value1 EXEC</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Redis</category>
+            
+          
+            
+              <category>Transaction</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

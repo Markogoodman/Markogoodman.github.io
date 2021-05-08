@@ -14,13 +14,49 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 25 Apr 2021 16:12:26 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 May 2021 00:06:32 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Redis</title>
+        <link>https://markogoodman.github.io/tags/redis/</link>
+        <pubDate>Sun, 09 May 2021 00:06:32 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/redis/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Transaction</title>
+        <link>https://markogoodman.github.io/tags/transaction/</link>
+        <pubDate>Sun, 09 May 2021 00:06:32 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/transaction/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>docker</title>
