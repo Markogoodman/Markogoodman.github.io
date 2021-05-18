@@ -14,7 +14,7 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 09 May 2021 00:06:32 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 May 2021 00:58:01 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,44 @@
         
       
 
+      
+      <item>
+        <title>Hyperloglog</title>
+        <link>https://markogoodman.github.io/posts/hyperloglog/</link>
+        <pubDate>Wed, 19 May 2021 00:58:01 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Wed, 19 May 2021 00:58:01 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/hyperloglog/</guid>
+        <description>Hyperloglog 這也是在工作接觸到的東西，是用來做基數統計的一個方法 第一次看到真的覺得這是什麼巫術0.0 目的是要做一個按讚的系統 就是玩家可以重複對某個影片</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>redis</category>
+            
+          
+            
+              <category>hyperloglog</category>
+            
+          
+            
+              <category>cardinality</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Redis Transaction 使用</title>
