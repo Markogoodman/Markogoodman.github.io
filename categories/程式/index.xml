@@ -14,13 +14,41 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 19 May 2021 00:58:01 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 May 2021 01:18:29 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>怎麼安裝 homebrew 裡面的舊版 package</title>
+        <link>https://markogoodman.github.io/posts/brew-install-older-pkg/</link>
+        <pubDate>Fri, 28 May 2021 01:18:29 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Fri, 28 May 2021 01:18:29 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/brew-install-older-pkg/</guid>
+        <description>怎麼裝舊版的 homegrew 套件 工作的時候要裝 protobuf 的 3.15.8 版，沒想到 homebrew 不給裝ＲＲＲ 用 brew info protobuf 查了一下現在最新版已經到 3.17.x 了，3.15.8 也沒列出來 估狗了一下發現這篇</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>Hyperloglog</title>
