@@ -14,13 +14,49 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 19 May 2021 00:58:01 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jun 2021 01:27:44 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Channel</title>
+        <link>https://markogoodman.github.io/tags/channel/</link>
+        <pubDate>Wed, 09 Jun 2021 01:27:44 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/channel/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Go</title>
+        <link>https://markogoodman.github.io/tags/go/</link>
+        <pubDate>Wed, 09 Jun 2021 01:27:44 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/go/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>cardinality</title>
@@ -137,24 +173,6 @@
         <author>marko958m@gmail.com (Marko Peng)</author>
         
         <guid>https://markogoodman.github.io/tags/concurrency/</guid>
-        <description></description>
-        
-        <dc:creator>Marko Peng</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Go</title>
-        <link>https://markogoodman.github.io/tags/go/</link>
-        <pubDate>Sat, 13 Mar 2021 20:53:52 +0800</pubDate>
-        <author>marko958m@gmail.com (Marko Peng)</author>
-        
-        <guid>https://markogoodman.github.io/tags/go/</guid>
         <description></description>
         
         <dc:creator>Marko Peng</dc:creator>
