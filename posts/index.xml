@@ -14,13 +14,43 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 09 Jun 2021 01:27:44 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Aug 2021 02:47:53 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Protobuf and Json</title>
+        <link>https://markogoodman.github.io/posts/protobuf-and-json/</link>
+        <pubDate>Tue, 10 Aug 2021 02:47:53 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Tue, 10 Aug 2021 02:47:53 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/protobuf-and-json/</guid>
+        <description>protobuf vs json 最近工作新專案要把原有的 http request 和 response 都從 json 改為 protobuf 預期是可以讓網路傳輸量還有 (de)serialize 加速～ 所以這邊想研究一下 protobuf 到底是做了什麼才比 json 快 json 基本上 json 就是</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>protobuf</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>How Channel Works</title>
