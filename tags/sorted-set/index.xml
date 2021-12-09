@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Sorted set on Marko</title>
+    <link>https://markogoodman.github.io/tags/sorted-set/</link>
+    <description>Recent content in Sorted set on Marko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
+    <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
+    <copyright>©{2020}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 09 Dec 2021 22:15:30 +0800</lastBuildDate>
+    
+        <atom:link href="https://markogoodman.github.io/tags/sorted-set/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Redis Sorted Set</title>
+        <link>https://markogoodman.github.io/posts/redis-sorted-set/</link>
+        <pubDate>Thu, 09 Dec 2021 22:15:30 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Thu, 09 Dec 2021 22:15:30 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/redis-sorted-set/</guid>
+        <description>Redis 裡面有一種 data type 叫做 sorted set 簡單來說就是一堆 key:value，但這些資料會依照 value (score) 來排序 讓使用者可以快速取得某個 key 的排名，或是一個排名範圍(或</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Redis</category>
+            
+          
+            
+              <category>Sorted set</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
