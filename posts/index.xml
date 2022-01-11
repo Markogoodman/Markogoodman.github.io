@@ -14,13 +14,41 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 09 Dec 2021 22:15:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 Dec 2021 00:16:00 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>AWS，如何把原本使用 AWS console 建立的資源完整搬到 cdk 內</title>
+        <link>https://markogoodman.github.io/posts/aws-migrate-from-existing-resource-to-cdk/</link>
+        <pubDate>Fri, 31 Dec 2021 00:16:00 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Fri, 31 Dec 2021 00:16:00 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/aws-migrate-from-existing-resource-to-cdk/</guid>
+        <description>如何把原本使用 AWS console 建立的資源完整搬到 cdk 內 目前公司使用 AWS 上是手動與 cdk 混著用，早期的東西都是用手動建立的，例如 Dynamodb table，裡面的 index 等等。 但後來</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>Redis Sorted Set</title>
