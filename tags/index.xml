@@ -14,13 +14,67 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 09 Dec 2021 22:15:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Mar 2022 22:24:17 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>database</title>
+        <link>https://markogoodman.github.io/tags/database/</link>
+        <pubDate>Mon, 28 Mar 2022 22:24:17 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/database/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>DynamoDB</title>
+        <link>https://markogoodman.github.io/tags/dynamodb/</link>
+        <pubDate>Mon, 28 Mar 2022 22:24:17 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/dynamodb/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>index</title>
+        <link>https://markogoodman.github.io/tags/index/</link>
+        <pubDate>Mon, 28 Mar 2022 22:24:17 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        
+        <guid>https://markogoodman.github.io/tags/index/</guid>
+        <description></description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>redis</title>
@@ -371,42 +425,6 @@
         <author>marko958m@gmail.com (Marko Peng)</author>
         
         <guid>https://markogoodman.github.io/tags/pointer/</guid>
-        <description></description>
-        
-        <dc:creator>Marko Peng</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>database</title>
-        <link>https://markogoodman.github.io/tags/database/</link>
-        <pubDate>Sun, 14 Jun 2020 02:19:55 +0800</pubDate>
-        <author>marko958m@gmail.com (Marko Peng)</author>
-        
-        <guid>https://markogoodman.github.io/tags/database/</guid>
-        <description></description>
-        
-        <dc:creator>Marko Peng</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>index</title>
-        <link>https://markogoodman.github.io/tags/index/</link>
-        <pubDate>Sun, 14 Jun 2020 02:19:55 +0800</pubDate>
-        <author>marko958m@gmail.com (Marko Peng)</author>
-        
-        <guid>https://markogoodman.github.io/tags/index/</guid>
         <description></description>
         
         <dc:creator>Marko Peng</dc:creator>

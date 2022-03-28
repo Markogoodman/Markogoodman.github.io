@@ -3,27 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://markogoodman.github.io/posts/aws-migrate-from-existing-resource-to-cdk/</loc>
-    <lastmod>2021-12-31T00:16:00+08:00</lastmod>
+    <loc>https://markogoodman.github.io/categories/</loc>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://markogoodman.github.io/categories/</loc>
-    <lastmod>2021-12-31T00:16:00+08:00</lastmod>
+    <loc>https://markogoodman.github.io/tags/database/</loc>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/dynamodb/</loc>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/dynamodb-index/</loc>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/index/</loc>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://markogoodman.github.io/</loc>
-    <lastmod>2021-12-31T00:16:00+08:00</lastmod>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://markogoodman.github.io/posts/</loc>
-    <lastmod>2021-12-31T00:16:00+08:00</lastmod>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/tags/</loc>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2022-03-28T22:24:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://markogoodman.github.io/posts/aws-migrate-from-existing-resource-to-cdk/</loc>
     <lastmod>2021-12-31T00:16:00+08:00</lastmod>
   </url>
   
@@ -39,11 +64,6 @@
   
   <url>
     <loc>https://markogoodman.github.io/tags/sorted-set/</loc>
-    <lastmod>2021-12-09T22:15:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/tags/</loc>
     <lastmod>2021-12-09T22:15:30+08:00</lastmod>
   </url>
   
@@ -250,16 +270,6 @@
   <url>
     <loc>https://markogoodman.github.io/posts/scheduling-in-go-part-i/</loc>
     <lastmod>2020-07-11T00:16:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/tags/database/</loc>
-    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/tags/index/</loc>
-    <lastmod>2020-06-14T02:19:55+08:00</lastmod>
   </url>
   
   <url>

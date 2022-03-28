@@ -14,13 +14,51 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 31 Dec 2021 00:16:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Mar 2022 22:24:17 +0800</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>DynamoDB Index</title>
+        <link>https://markogoodman.github.io/posts/dynamodb-index/</link>
+        <pubDate>Mon, 28 Mar 2022 22:24:17 +0800</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Mon, 28 Mar 2022 22:24:17 +0800</atom:modified>
+        <guid>https://markogoodman.github.io/posts/dynamodb-index/</guid>
+        <description>DynamoDB index 這篇想講一下用 DynamoDB 遇到的狀況，字很多但內容應該很少，比較像流水帳 前陣子工作時需要將 DynamoDB 的全部資料(包括已經存在的和未來新來的)載入進 Redshift 並在途</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>DynamoDB</category>
+            
+          
+            
+              <category>index</category>
+            
+          
+            
+              <category>database</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>AWS，如何把原本使用 AWS console 建立的資源完整搬到 cdk 內</title>
