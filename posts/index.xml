@@ -14,13 +14,43 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 28 Mar 2022 22:24:17 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Sep 2022 16:58:48 -0400</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>2 Phase Commit</title>
+        <link>https://markogoodman.github.io/posts/2-phase-commit/</link>
+        <pubDate>Fri, 30 Sep 2022 16:58:48 -0400</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Fri, 30 Sep 2022 16:58:48 -0400</atom:modified>
+        <guid>https://markogoodman.github.io/posts/2-phase-commit/</guid>
+        <description>看了 DDIA 第九章 記錄一下 2 phase commit 是用來做 multiple nodes tansaction 時使用的方法 single node transaction 通常都是由 log 與 commit 來達成 postgresql.org/docs/current/wal-intro.html 例如 postgres 的做法就是每個操作都會有一個 write-ahead-log (wal)，接著會把資</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>2 phase commit</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>DynamoDB Index</title>
