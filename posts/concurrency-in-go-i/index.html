@@ -10,17 +10,17 @@
 
 
   
-  <script defer src="/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
+  <script defer src="/js/fuse.min.c4bee9a8d44273d6154fe86006923d4131eb2e8069d8897687137c6f37f553e3.js"></script>
 
 
 
-<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
+<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
 
-<script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
+<script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fe4b81a87e722d20c220a2b6ca145a3d8a2cb3ea1e89de55329ff417bdd9570.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1208,7 +1208,7 @@
     
 
 
-<link rel="stylesheet" href="/css/main.min.css">
+<link rel="stylesheet" href="/sass/main.scss">
 
 
     
@@ -1230,7 +1230,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Concurrency in Go 這本書前三章的讀書筆記～ ">
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.110.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1574,7 +1574,7 @@
 例如下面這段程式就有可能出現很多結果，因為使用者可能以為go裡面的程式碼寫在前面，就會先跑</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1583,14 +1583,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span>
-<span class="k">go</span> <span class="kd">func</span><span class="p">(){</span>
-    <span class="nx">a</span><span class="o">++</span>
-<span class="p">}()</span>
-<span class="k">if</span> <span class="nx">a</span><span class="o">==</span><span class="mi">0</span><span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;zero&#34;</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="k">go</span> <span class="kd">func</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">a</span><span class="o">++</span>
+</span></span><span class="line"><span class="cl"><span class="p">}()</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">a</span><span class="o">==</span><span class="mi">0</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;zero&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>Atomicity</strong><br />
 不可切割，安全，一次要做完</p>
@@ -1631,23 +1631,23 @@ primitives 指的像是 sync package 裡面的 mutex<br />
 以前好像是，後來改成可以，不然垃圾回收之類的功能有可能被卡住<br />
 但大多還是在固定時間才會被暫停，例如 sleep, 等 io 之類的</p>
 <p>goroutine closure 在同一個 address space 執行</p>
-<pre><code>	var wg sync.WaitGroup
-	salutation := &quot;hello&quot;
+<pre tabindex="0"><code>	var wg sync.WaitGroup
+	salutation := &#34;hello&#34;
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		salutation = &quot;welcome&quot;
+		salutation = &#34;welcome&#34;
 	}()
 	wg.Wait()
 	fmt.Println(salutation)
 </code></pre><h3 id="the-sync-package">The sync package</h3>
 <h4 id="waitgroup">WaitGroup</h4>
-<pre><code>    var wg sync.WaitGroup // 傳進 func 時要傳 pointer
+<pre tabindex="0"><code>    var wg sync.WaitGroup // 傳進 func 時要傳 pointer
     wg.Add(2) // +2
     defer wg.Done() // -1
     wg.Wait() // == 0 時完成
 </code></pre><h4 id="mutex">mutex</h4>
-<pre><code>    var lock sync.Mutex
+<pre tabindex="0"><code>    var lock sync.Mutex
     lock.Lock()
     defer lock.Unlock()
     
@@ -1657,7 +1657,7 @@ primitives 指的像是 sync package 裡面的 mutex<br />
     m.RLocker() // r locker 
 </code></pre><h4 id="cond">Cond</h4>
 <p>有效率的等待，不用浪費ＣＰＵ跑迴圈</p>
-<pre><code>c := sync.NewCond(&amp;sync.Mutex{}) 
+<pre tabindex="0"><code>c := sync.NewCond(&amp;sync.Mutex{}) 
 c.L.Lock()
 for conditionTrue() == false {
     c.Wait()  // suspend, 其他 goroutine 可以用 thread
@@ -1667,15 +1667,14 @@ c.L.Unlock()
 
 c.Singal() 去戳正在 Wait 的一個 goroutine (最早開始等的)
 c.Broadcast() 去戳所有在 Wait 的 goroutines
-
 </code></pre><p>signal 可以用 channel 來做出一樣的功能<br />
 但 broadcast 會比較麻煩，也可能需要很多操作</p>
 <h4 id="once">once</h4>
-<pre><code>var once sync.Once
+<pre tabindex="0"><code>var once sync.Once
 once.Do(xxx)
 </code></pre><p>即使一堆 goroutine，也保證 once 只會做一件事情</p>
 <p>下面這種也是只會執行aaa</p>
-<pre><code>once.Do(aaa)
+<pre tabindex="0"><code>once.Do(aaa)
 once.Do(bbb)
 </code></pre><p>計數是記once 做過的事情而不是 unique function 數</p>
 <h4 id="pool">Pool</h4>
@@ -1683,7 +1682,7 @@ once.Do(bbb)
 <p>提前把一些東西塞進 pool 避免 create，像是 db 連線等等</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1695,17 +1694,17 @@ once.Do(bbb)
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">myPool</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">sync</span><span class="p">.</span><span class="nx">Pool</span><span class="p">{</span>
-		<span class="nx">New</span><span class="p">:</span> <span class="kd">func</span><span class="p">()</span> <span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
-			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Creating new instance.&#34;</span><span class="p">)</span>
-			<span class="k">return</span> <span class="kd">struct</span><span class="p">{}{}</span>
-		<span class="p">},</span>
-	<span class="p">}</span>
-	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
-	<span class="nx">instance</span> <span class="o">:=</span> <span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
-	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Put</span><span class="p">(</span><span class="nx">instance</span><span class="p">)</span>
-	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">myPool</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">sync</span><span class="p">.</span><span class="nx">Pool</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">New</span><span class="p">:</span> <span class="kd">func</span><span class="p">()</span> <span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Creating new instance.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kd">struct</span><span class="p">{}{}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">},</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">instance</span> <span class="o">:=</span> <span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Put</span><span class="p">(</span><span class="nx">instance</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">myPool</span><span class="p">.</span><span class="nf">Get</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>使用方法：</p>
 <ol>
@@ -1715,7 +1714,7 @@ once.Do(bbb)
 <li>裡面的東西基本上要長得一樣</li>
 </ol>
 <h3 id="channels">Channels</h3>
-<pre><code>    var dataStream chan int
+<pre tabindex="0"><code>    var dataStream chan int
     var dataStream &lt;-chan int
     var dataStream chan&lt;- int
     dataStream = make(&lt;-chan int, 1) 
@@ -1726,16 +1725,16 @@ once.Do(bbb)
     d = dataStream
 </code></pre><p>關閉 channel<br />
 之後還是可以無限讀取，因為可能很多下游的 goroutine 都需要讀</p>
-<pre><code>	dataStream := make(chan int)
+<pre tabindex="0"><code>	dataStream := make(chan int)
 	go func() {
 		close(dataStream)
 
 	}()
 	d, ok := &lt;-dataStream
-	fmt.Println(&quot;I GET! &quot;, d, ok) // 0, false
-</code></pre><pre><code>收到 close 時會直接 break
+	fmt.Println(&#34;I GET! &#34;, d, ok) // 0, false
+</code></pre><pre tabindex="0"><code>收到 close 時會直接 break
 for integer := range intStream { 
-    fmt.Printf(&quot;%v &quot;, integer)
+    fmt.Printf(&#34;%v &#34;, integer)
 }
 </code></pre><p>p.75 列出了不同狀態的 chan 上操作會出現什麼情況，包括錯誤們</p>
 <p>p. 91 有範例<br />
@@ -1749,7 +1748,7 @@ for integer := range intStream {
 <h3 id="select">Select</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1762,24 +1761,22 @@ for integer := range intStream {
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go">    <span class="nx">v1</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
-    <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
-        <span class="nb">close</span><span class="p">(</span><span class="nx">v1</span><span class="p">)</span>
-    <span class="p">}()</span>
-
-
-    <span class="k">select</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="nx">x</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">v1</span><span class="p">:</span> <span class="c1">// v1 有東西拿時
-</span><span class="c1"></span>        <span class="c1">// xxx
-</span><span class="c1"></span>    <span class="k">case</span> <span class="nx">v1</span> <span class="o">&lt;-</span> <span class="mi">1</span><span class="p">:</span>   <span class="c1">// v1 有空間時
-</span><span class="c1"></span>       <span class="c1">// ooo
-</span><span class="c1"></span>    <span class="p">}</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">    <span class="nx">v1</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">close</span><span class="p">(</span><span class="nx">v1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">select</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nx">x</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">v1</span><span class="p">:</span> <span class="c1">// v1 有東西拿時
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// xxx
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">case</span> <span class="nx">v1</span> <span class="o">&lt;-</span> <span class="mi">1</span><span class="p">:</span>   <span class="c1">// v1 有空間時
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       <span class="c1">// ooo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>當多個case都可以時會隨機選一個</p>
 <p>timeout<br />
@@ -2076,7 +2073,7 @@ for integer := range intStream {
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.2c2313dc9c728a8dd3befdf8561ecb1e3c084ee1ef6e84cd23d3eaee95dc982f.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -2428,7 +2425,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
+<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
 
 <script defer src="/js/helper/getParents.min.js"></script>
 

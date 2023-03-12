@@ -1,310 +1,194 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/2-phase-commit/</loc>
-    <lastmod>2022-09-30T16:58:48-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/tags/2-phase-commit/</loc>
-    <lastmod>2022-09-30T16:58:48-04:00</lastmod>
-  </url>
-  
   <url>
     <loc>https://markogoodman.github.io/categories/</loc>
-    <lastmod>2022-09-30T16:58:48-04:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/</loc>
-    <lastmod>2022-09-30T16:58:48-04:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+  </url><url>
+    <loc>https://markogoodman.github.io/tags/parquet/</loc>
+    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+  </url><url>
+    <loc>https://markogoodman.github.io/posts/parquet/</loc>
+    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/</loc>
-    <lastmod>2022-09-30T16:58:48-04:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/</loc>
-    <lastmod>2022-09-30T16:58:48-04:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+  </url><url>
+    <loc>https://markogoodman.github.io/tags/2-phase-commit/</loc>
     <lastmod>2022-09-30T16:58:48-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://markogoodman.github.io/posts/2-phase-commit/</loc>
+    <lastmod>2022-09-30T16:58:48-04:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/database/</loc>
     <lastmod>2022-03-28T22:24:17+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/dynamodb/</loc>
     <lastmod>2022-03-28T22:24:17+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/dynamodb-index/</loc>
     <lastmod>2022-03-28T22:24:17+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/index/</loc>
     <lastmod>2022-03-28T22:24:17+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/aws-migrate-from-existing-resource-to-cdk/</loc>
     <lastmod>2021-12-31T00:16:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/redis/</loc>
     <lastmod>2021-12-09T22:15:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/redis-sorted-set/</loc>
     <lastmod>2021-12-09T22:15:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/sorted-set/</loc>
     <lastmod>2021-12-09T22:15:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/http/</loc>
     <lastmod>2021-10-08T00:20:29+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/http-4-way-handshake/</loc>
     <lastmod>2021-10-08T00:20:29+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/protobuf/</loc>
     <lastmod>2021-08-10T02:47:53+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/protobuf-and-json/</loc>
     <lastmod>2021-08-10T02:47:53+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/channel/</loc>
     <lastmod>2021-06-09T01:27:44+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/go/</loc>
     <lastmod>2021-06-09T01:27:44+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/how-channel-works/</loc>
     <lastmod>2021-06-09T01:27:44+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/brew-install-older-pkg/</loc>
     <lastmod>2021-05-28T01:18:29+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/cardinality/</loc>
     <lastmod>2021-05-19T00:58:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/hyperloglog/</loc>
-    <lastmod>2021-05-19T00:58:01+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/hyperloglog/</loc>
     <lastmod>2021-05-19T00:58:01+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://markogoodman.github.io/posts/hyperloglog/</loc>
+    <lastmod>2021-05-19T00:58:01+08:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/redis-transaction/</loc>
     <lastmod>2021-05-09T00:06:32+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/transaction/</loc>
     <lastmod>2021-05-09T00:06:32+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/docker/</loc>
-    <lastmod>2021-04-25T16:12:26+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/docker/</loc>
     <lastmod>2021-04-25T16:12:26+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://markogoodman.github.io/posts/docker/</loc>
+    <lastmod>2021-04-25T16:12:26+08:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/what-is-websocket/</loc>
     <lastmod>2021-04-12T23:44:15+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/what-is-http/</loc>
     <lastmod>2021-04-12T23:40:36+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/concurrency/</loc>
     <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/series/concurrency-in-go/</loc>
     <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/concurrency-in-go-iv/</loc>
     <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/goroutine/</loc>
     <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/series/</loc>
     <lastmod>2021-03-13T20:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/concurrency-in-go-iii/</loc>
     <lastmod>2021-03-13T20:52:13+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/concurrency-in-go-ii/</loc>
     <lastmod>2021-02-28T22:32:38+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/concurrency-in-go-i/</loc>
     <lastmod>2021-02-27T23:21:42+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/gqlgen/</loc>
-    <lastmod>2021-01-23T01:04:19+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/gqlgen/</loc>
     <lastmod>2021-01-23T01:04:19+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://markogoodman.github.io/posts/gqlgen/</loc>
+    <lastmod>2021-01-23T01:04:19+08:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/graphql/</loc>
     <lastmod>2021-01-23T01:04:19+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/garbage-collection/</loc>
     <lastmod>2020-12-16T22:35:13+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</loc>
     <lastmod>2020-12-16T22:35:13+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/gc/</loc>
     <lastmod>2020-12-16T22:35:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://markogoodman.github.io/posts/csrf/</loc>
-    <lastmod>2020-10-17T15:05:29+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/csrf/</loc>
     <lastmod>2020-10-17T15:05:29+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://markogoodman.github.io/posts/csrf/</loc>
+    <lastmod>2020-10-17T15:05:29+08:00</lastmod>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/scheduler/</loc>
     <lastmod>2020-09-19T21:41:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/series/scheduling-in-go/</loc>
     <lastmod>2020-09-19T21:41:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/scheduling-in-go-part-iii/</loc>
     <lastmod>2020-09-19T21:41:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/scheduling-in-go-part-ii/</loc>
     <lastmod>2020-09-12T00:54:03+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/go-map/</loc>
     <lastmod>2020-07-17T23:19:11+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/map/</loc>
     <lastmod>2020-07-17T23:19:11+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/pointer/</loc>
     <lastmod>2020-07-17T23:19:11+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/scheduling-in-go-part-i/</loc>
     <lastmod>2020-07-11T00:16:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/tags/mongodb/</loc>
     <lastmod>2020-06-14T02:19:55+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/mongodb-partial-sparse-index/</loc>
     <lastmod>2020-06-14T02:19:55+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/archive/</loc>
     <lastmod>2020-06-14T02:11:37+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/about/</loc>
     <lastmod>2020-06-13T22:46:49+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://markogoodman.github.io/posts/my-first-post/</loc>
     <lastmod>2020-06-13T22:46:37+08:00</lastmod>
   </url>
-  
 </urlset>
