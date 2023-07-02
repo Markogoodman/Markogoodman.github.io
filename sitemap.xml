@@ -3,24 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://markogoodman.github.io/categories/</loc>
-    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+    <lastmod>2023-07-02T16:30:51-04:00</lastmod>
+  </url><url>
+    <loc>https://markogoodman.github.io/posts/spark-small-file-problem/</loc>
+    <lastmod>2023-07-02T16:30:51-04:00</lastmod>
   </url><url>
     <loc>https://markogoodman.github.io/</loc>
-    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
+    <lastmod>2023-07-02T16:30:51-04:00</lastmod>
+  </url><url>
+    <loc>https://markogoodman.github.io/posts/</loc>
+    <lastmod>2023-07-02T16:30:51-04:00</lastmod>
+  </url><url>
+    <loc>https://markogoodman.github.io/tags/spark/</loc>
+    <lastmod>2023-07-02T16:30:51-04:00</lastmod>
+  </url><url>
+    <loc>https://markogoodman.github.io/tags/</loc>
+    <lastmod>2023-07-02T16:30:51-04:00</lastmod>
+  </url><url>
+    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
+    <lastmod>2023-07-02T16:30:51-04:00</lastmod>
   </url><url>
     <loc>https://markogoodman.github.io/tags/parquet/</loc>
     <lastmod>2023-02-26T11:38:07-05:00</lastmod>
   </url><url>
     <loc>https://markogoodman.github.io/posts/parquet/</loc>
-    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
-  </url><url>
-    <loc>https://markogoodman.github.io/posts/</loc>
-    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
-  </url><url>
-    <loc>https://markogoodman.github.io/tags/</loc>
-    <lastmod>2023-02-26T11:38:07-05:00</lastmod>
-  </url><url>
-    <loc>https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/</loc>
     <lastmod>2023-02-26T11:38:07-05:00</lastmod>
   </url><url>
     <loc>https://markogoodman.github.io/tags/2-phase-commit/</loc>
