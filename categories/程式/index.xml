@@ -14,13 +14,41 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 02 Jul 2023 16:30:51 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 14 Oct 2023 21:42:23 -0400</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/categories/%E7%A8%8B%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Bloom Filter</title>
+        <link>https://markogoodman.github.io/posts/bloom-filter/</link>
+        <pubDate>Sat, 14 Oct 2023 21:42:23 -0400</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sat, 14 Oct 2023 21:42:23 -0400</atom:modified>
+        <guid>https://markogoodman.github.io/posts/bloom-filter/</guid>
+        <description>Bloom filter Bloom filter 是一個概念很簡單又好用的東西，之前看過就想記錄一下 為何要用 Bloom filter 可以快速確認一個 key 是否存在一個資料集內，且不需花太多空間來儲存這些多餘</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>How to solve spark large amount of small files problem</title>
