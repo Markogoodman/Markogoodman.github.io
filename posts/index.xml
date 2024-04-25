@@ -14,13 +14,51 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 14 Oct 2023 21:42:23 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2024 21:28:05 -0400</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Transport Layer Note</title>
+        <link>https://markogoodman.github.io/posts/tcp/</link>
+        <pubDate>Wed, 24 Apr 2024 21:28:05 -0400</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Wed, 24 Apr 2024 21:28:05 -0400</atom:modified>
+        <guid>https://markogoodman.github.io/posts/tcp/</guid>
+        <description>準備面試的 note 參考文章 https://github.com/forthright48/notes/blob/master/books/computer-networking.md https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/ Transport Layer 兩個重點 protocol: UDP and TCP 這篇主要著重在可靠傳輸上 可靠必須要 錯誤檢查 checksum 掉包檢查(timeout, etc.) 接收者的 feedback (確認正確接收</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>TCP</category>
+            
+          
+            
+              <category>Internet</category>
+            
+          
+        
+        
+          
+            
+              <category>程式</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>Bloom Filter</title>
