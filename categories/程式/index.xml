@@ -29,7 +29,7 @@
         <author>marko958m@gmail.com (Marko Peng)</author>
         <atom:modified>Wed, 24 Apr 2024 21:28:05 -0400</atom:modified>
         <guid>https://markogoodman.github.io/posts/tcp/</guid>
-        <description>準備面試的 note 參考文章 https://github.com/forthright48/notes/blob/master/books/computer-networking.md https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/ Transport Layer 兩個重點 protocol: UDP and TCP 這篇主要著重在可靠傳輸上 可靠必須要 錯誤檢查 checksum 掉包檢查(timeout, etc.) 接收者的 feedback (確認正確接收</description>
+        <description>Some notes References: https://github.com/forthright48/notes/blob/master/books/computer-networking.md https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/ 中文版在下面 &amp;mdash; English Version &amp;mdash; Transport Layer Two important protocols: UDP and TCP This article will mainly focus on how reliable transmission works. To be reliable Error checking, checksum Detect lost packets (timeout, etc.) Feedback from receiver to make sure they have received, which might lose as well. Retransmisison It&amp;rsquo;ll be slow if it waits for receiver&amp;rsquo;s feedback after sending</description>
         
         <dc:creator>Marko Peng</dc:creator>
         

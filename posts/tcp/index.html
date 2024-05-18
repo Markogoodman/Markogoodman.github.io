@@ -1544,7 +1544,7 @@
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Apr 24, 2024 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;4&nbsp;min read </span>
   
   <span class="single__info">
     
@@ -1564,11 +1564,92 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>準備面試的 note</p>
-<p>參考文章<br />
+      <p>Some notes</p>
+<p>References:<br />
 <a href="https://github.com/forthright48/notes/blob/master/books/computer-networking.md">https://github.com/forthright48/notes/blob/master/books/computer-networking.md</a><br />
 <a href="https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/">https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/</a></p>
+<p>中文版在下面</p>
+<p>&mdash; English Version &mdash;</p>
 <h1 id="transport-layer">Transport Layer</h1>
+<p>Two important protocols: UDP and TCP</p>
+<p>This article will mainly focus on how reliable transmission works.</p>
+<p>To be reliable</p>
+<ol>
+<li>Error checking, checksum</li>
+<li>Detect lost packets (timeout, etc.)</li>
+<li>Feedback from receiver to make sure they have received, which might lose as well.</li>
+<li>Retransmisison</li>
+</ol>
+<p>It&rsquo;ll be slow if it waits for receiver&rsquo;s feedback after sending every package.<br />
+Pipelining mechanism can help. Sender allows to send a few more following packets without receiving the feedback of the current one.</p>
+<h3 id="automatic-repeat-request-arq">Automatic Repeat Request (ARQ)</h3>
+<p><a href="https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/">https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/</a><br />
+2 mechanisms to recover from pipelining error.</p>
+<ol>
+<li>Go-Back-N (GBN)</li>
+</ol>
+<p>Starting from the unacknowledged packet(base), sender can send <code>n</code> packets -&gt; sliding-window protocol.<br />
+Receiving <code>ack x</code> means packets before <code>x</code> are received.<br />
+When timeout, resend packets from the base.</p>
+<p>If receiver get <code>(n+1)th</code> packet but <code>nth</code> is not arrived, it&rsquo;ll drop it.<br />
+This allows easier implementation and no need to buffer out of order packets.<br />
+Though there could be more retransmission.<br />
+When we lose <code>nth</code> packet, everything after that will need to be resent.<br />
+The only thing to keep is the number that indicates everything before is received.</p>
+<ol start="2">
+<li>selective repeat<br />
+Sender and receiver both have buffer to keep the out of order packets.<br />
+Only lost packets need to be sent again.<br />
+But every sent packet needs to have ack(feed).</li>
+</ol>
+<p>Internet is unreliable</p>
+<ol>
+<li>packet broken</li>
+<li>packet lost</li>
+<li>packet order</li>
+</ol>
+</br>
+<p>So we need the following mechanisms</p>
+<ol>
+<li>checksum, error checking</li>
+<li>ACK, feedback</li>
+<li>retransmission timer</li>
+<li>sequence number to handle duplicate and lost packets</li>
+<li>pipeline to avoid the Stop-and-wait and wasting the bandwidth</li>
+<li>sliding window to track packet transmission status</li>
+<li>Go-Back-N for simple implementation</li>
+<li>selective repeat to reduce retransmission cost</li>
+<li>TTL for ensuring packet flushing</li>
+</ol>
+<h2 id="connection-oriented-transport-tcp">Connection-Oriented Transport: TCP</h2>
+<p>Piggybacking: ack or feedback signal does not go back to sender immediately. Instead, it waits for real data to be transmitted together.</p>
+<p><a href="https://notfalse.net/28/tcp-congestion-control#-Fast-Retransmit">https://notfalse.net/28/tcp-congestion-control#-Fast-Retransmit</a></p>
+<p>TimeoutInterval usually is  EstimatedRTT + 4⋅DevRTT</p>
+<p>Single Timer for all unacknowledged packets</p>
+<p>When there&rsquo;s timeout, timeout interval is increased, congestion controll. Reset timeout interval when reveiving ack.</p>
+<p>TCP is a combination of GBN and SR</p>
+<p>TCP uses ack like GBN<br />
+TCP&rsquo;s ack mean &ldquo;next-expected-packet&rdquo;, which is slightly different from GBN<br />
+Receiver buffers some unorder packets</p>
+<h3 id="fast-retransmission">Fast retransmission</h3>
+<p>If receiver expects packet <code>x</code> but keeps receiving packets like <code>x+1</code>, <code>x+2</code> &hellip;, it will buffer these packets. It will also send 3 ack <code>x</code> in a row to let the sender knows that this package might be lost. Sender will resend the packet <code>x</code> before timeout.</p>
+<p>Details can be found<br />
+<a href="https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/">https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/</a></p>
+<h3 id="flow-control">Flow Control</h3>
+<p>To avoid sener sending too much data that receiver cannot handle, sender remembers that the last acknowledged byte and the last sent byte.<br />
+The unacknowledged packets number will have to be smaller than the window (rwnd, window will be sent to to sender via header)</p>
+<h3 id="congestion-control">Congestion Control</h3>
+<p>To avoid having too many packets on the network causing traffic jam.<br />
+Sender maintains a window, the number of unacknowledged packets cannot exceed min(rwnd, cwnd)<br />
+If there&rsquo;s no traffic jam then increase cwnd, else decrease.</p>
+<h4 id="slow-start">slow start</h4>
+<p>cwnd starts small, then double when increasing.<br />
+Stop when there&rsquo;s tranmission issue, and set <code>ssthresh</code> to cwnd/2.<br />
+cwnd starts from 1 and doules everytime, after reaching <code>ssthresh</code>, it only increases 1 at a time (Congestion Avoidance mode).<br />
+Receiving 3 acks does not mean traffic jame, because other packets arrived correctly. So it&rsquo;s fast recovery mode.</p>
+<p><a href="https://github.com/forthright48/notes/blob/master/books/computer-networking.md">https://github.com/forthright48/notes/blob/master/books/computer-networking.md</a></p>
+<p>&mdash; 中文版 &mdash;</p>
+<h1 id="transport-layer-1">Transport Layer</h1>
 <p>兩個重點 protocol: UDP and TCP</p>
 <p>這篇主要著重在可靠傳輸上</p>
 <p>可靠必須要</p>
@@ -1581,7 +1662,7 @@
 <p>如果 sender 傳完一個後就等回應，太慢<br />
 所以可以一次傳多個（pipelining）<br />
 兩方都需要 buffer 一些資料</p>
-<h3 id="automatic-repeat-request-arq">Automatic Repeat Request (ARQ)</h3>
+<h3 id="automatic-repeat-request-arq-1">Automatic Repeat Request (ARQ)</h3>
 <p><a href="https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/">https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/</a><br />
 兩種 pipeline 錯誤恢復的機制</p>
 <ol>
@@ -1618,7 +1699,7 @@ receiver 這樣實作比較簡單，不用 buffer 一堆 out of order packets，
 <li>selective retransmission 減少重送成本</li>
 <li>TTL for ensuring packet flushing</li>
 </ol>
-<h2 id="connection-oriented-transport-tcp">Connection-Oriented Transport: TCP</h2>
+<h2 id="connection-oriented-transport-tcp-1">Connection-Oriented Transport: TCP</h2>
 <p>Piggybacking: ack 之類的確認訊號不會馬上傳回給發送端，而是等接收端也想傳資料去發送端時順便給</p>
 <p><a href="https://notfalse.net/28/tcp-congestion-control#-Fast-Retransmit">https://notfalse.net/28/tcp-congestion-control#-Fast-Retransmit</a></p>
 <p>TimeoutInterval 通常為 EstimatedRTT+4⋅DevRTT</p>
@@ -1628,20 +1709,20 @@ receiver 這樣實作比較簡單，不用 buffer 一堆 out of order packets，
 <p>TCP 也是使用累計型的 ack (像GBN)<br />
 TCP 回應的 ack 代表 &ldquo;預期接下來收到的資料&rdquo;，與 GO back n 的 &ldquo;之前的都已經收到&rdquo; 稍微不同</p>
 <p>接收端會 buffer 一些 unorder 的 packets，以及保持一個接下來應該要收到的資料的 seq num</p>
-<h3 id="fast-retransmission">Fast retransmission</h3>
+<h3 id="fast-retransmission-1">Fast retransmission</h3>
 <p>如果目前希望收到 x，但是一直收到非預期的封包(x+1, x+2&hellip;)，會暫存這些封包，但會連續發送 3 個同樣的 ack x 跟發送端通知這個封包可能遺失了<br />
 發送端看到這個重複的 ack，就會在 x timeout 前就重送這“一個”封包 （像是 selective repeat）</p>
 <p>裡面講的滿清楚的可以看<br />
 <a href="https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/">https://blog.yfxie.com/comparison-of-network-gbn-sr-and-tcp/</a></p>
-<h3 id="flow-control">Flow Control</h3>
+<h3 id="flow-control-1">Flow Control</h3>
 <p>避免發送端送太快，接收端的 buffer 爆掉，程式來不及處理<br />
 發送端會記住最後一個被 ack 的 byte 還有最後一個送出的 byte<br />
 這些 unacknowledged packets 必須小於接收端的 window (rwnd, window 會透過 header 告知發送端)</p>
-<h3 id="congestion-control">Congestion Control</h3>
+<h3 id="congestion-control-1">Congestion Control</h3>
 <p>避免網路擁塞</p>
 <p>發送端保持一個 window，unacknowledged packets 不可超過 min(rwnd, cwnd)<br />
 網路上都沒雍塞現象的話cwnd會增加，反之若收到壅塞訊號（例如timeout）則減少</p>
-<h4 id="slow-start">slow start</h4>
+<h4 id="slow-start-1">slow start</h4>
 <p>剛開始 cwnd 會很小，然後兩倍兩倍成長<br />
 發現問題時就停止，並設定一個 ssthresh 為發現問題時的 cwnd/2</p>
 <p>cwnd 從 1 開始，一樣兩倍兩倍長大，達到 ssthresh就開始一次只 +1 (Congestion Avoidance mode)</p>
