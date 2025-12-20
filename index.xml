@@ -876,10 +876,6 @@ ch is a pointer to hchan</description>
               <category>Garbage collection</category>
             
           
-            
-              <category>垃圾回收</category>
-            
-          
         
         
           
