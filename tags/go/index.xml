@@ -29,7 +29,24 @@
         <author>marko958m@gmail.com (Marko Peng)</author>
         <atom:modified>Wed, 09 Jun 2021 01:27:44 +0800</atom:modified>
         <guid>https://markogoodman.github.io/posts/how-channel-works/</guid>
-        <description>How channel works Note of https://www.youtube.com/watch?v=KBZlN0izeiY&amp;amp;ab_channel=GopherAcademy by Kavya Joshi. Channel ！！！ goroutine-safe store data、FIFO pass data between goroutines block, unblock goroutine making channels https://golang.org/src/runtime/chan.go hchan struct contains buf -&amp;gt; circular queue (with send index &amp;amp; receive index) sendx recvx mutex sendq // list of sudo g recvq // list of sudo g &amp;hellip; ch := make(chan Task, 3) This comman</description>
+        <description>How channel works Note of
+https://www.youtube.com/watch?v=KBZlN0izeiY&amp;amp;ab_channel=GopherAcademy
+by Kavya Joshi.
+Channel ！！！ goroutine-safe
+store data、FIFO
+pass data between goroutines
+block, unblock goroutine
+making channels https://golang.org/src/runtime/chan.go
+hchan struct contains
+buf -&amp;gt; circular queue (with send index &amp;amp; receive index)
+sendx
+recvx
+mutex
+sendq // list of sudo g
+recvq // list of sudo g
+&amp;hellip; ch := make(chan Task, 3)
+This comman allocates an hchan on the heap
+ch is a pointer to hchan</description>
         
         <dc:creator>Marko Peng</dc:creator>
         
@@ -49,7 +66,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -87,7 +104,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -131,7 +148,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -175,7 +192,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -219,7 +236,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -263,7 +280,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -301,7 +318,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -339,7 +356,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -383,7 +400,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -427,7 +444,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         
@@ -465,7 +482,7 @@
         
           
             
-              <category>程式</category>
+              <category>Computer Science</category>
             
           
         

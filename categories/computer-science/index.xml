@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Posts on Marko</title>
-    <link>https://markogoodman.github.io/posts/</link>
-    <description>Recent content in Posts on Marko</description>
+    <title>Computer Science on Marko</title>
+    <link>https://markogoodman.github.io/categories/computer-science/</link>
+    <description>Recent content in Computer Science on Marko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>©{2020}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 19 Dec 2025 16:37:39 -0500</lastBuildDate>
     
-        <atom:link href="https://markogoodman.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://markogoodman.github.io/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -1104,24 +1104,6 @@ ch is a pointer to hchan</description>
               <category>Computer Science</category>
             
           
-        
-        
-      </item>
-      
-      <item>
-        <title>My First Post</title>
-        <link>https://markogoodman.github.io/posts/my-first-post/</link>
-        <pubDate>Sat, 13 Jun 2020 22:46:37 +0800</pubDate>
-        <author>marko958m@gmail.com (Marko Peng)</author>
-        <atom:modified>Sat, 13 Jun 2020 22:46:37 +0800</atom:modified>
-        <guid>https://markogoodman.github.io/posts/my-first-post/</guid>
-        <description>汪</description>
-        
-        <dc:creator>Marko Peng</dc:creator>
-        
-        
-        
-        
         
         
       </item>
