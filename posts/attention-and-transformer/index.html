@@ -1670,15 +1670,13 @@ Use Wq, Wk, Wv to calculate the updated xi (20 dimensions)</p>
 <h2 id="how-to-use-output">How to use output</h2>
 <h3 id="gptdecoder-only">GPT（Decoder-only）</h3>
 <ul>
-<li>Take updated last token</li>
-<li>linear + softmax</li>
-<li>predict token</li>
+<li>GPT updates tokens using only past context, then takes the final token’s representation. That last token goes through a linear layer and softmax to predict the next token.</li>
 </ul>
 <hr />
 <h3 id="bertencoder-only">BERT（Encoder-only）</h3>
 <ul>
-<li>to understand</li>
-<li>classification / search / embedding</li>
+<li>BERT updates every token by looking at the full input context, so each token encodes the complete meaning of the sentence.</li>
+<li>These contextualized representations are ideal for understanding tasks like classification, search, and embeddings.</li>
 </ul>
 
     </article>
