@@ -14,13 +14,45 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 19 Dec 2025 16:37:39 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 22:50:50 -0400</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Model context protocol</title>
+        <link>https://markogoodman.github.io/posts/mcp/</link>
+        <pubDate>Tue, 14 Apr 2026 22:50:50 -0400</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Tue, 14 Apr 2026 22:50:50 -0400</atom:modified>
+        <guid>https://markogoodman.github.io/posts/mcp/</guid>
+        <description>Model Context Protocol I installed so many MCP servers on my AI agnets and they have magic.
+Just some short notes to help myself understand what MCP is.
+What it is MCP is something that helps the AI models nteract with external services, data sources in a structured, controlled way. Instead of letting the AI models to explore how to work with the external things itself, the MCP servers provide the safe and deterministic tools with descriptions so that AI models can easily understand and use them.</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ai</category>
+            
+          
+        
+        
+          
+            
+              <category>Computer Science</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Attention and Transformer</title>
