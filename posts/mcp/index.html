@@ -1566,7 +1566,7 @@
 <p>I installed so many MCP servers on my AI agnets and they have magic.<br />
 Just some short notes to help myself understand what MCP is.</p>
 <h2 id="what-it-is">What it is</h2>
-<p>MCP is something that helps the AI models  nteract with external services, data sources in a structured, controlled way. Instead of letting the AI models to explore how to work with the external things itself, the MCP servers provide the safe and deterministic tools with descriptions so that AI models can easily understand and use them.</p>
+<p>MCP is something that helps the AI models interact with external services, data sources in a structured, controlled way. Instead of letting the AI models to explore how to work with the external things itself, the MCP servers provide the safe and deterministic tools with descriptions so that AI models can easily understand and use them.</p>
 <p>In a typical setup, an AI agent (like Cline) sits between the model and the MCP server, passing tool definitions to the model and executing tool calls on its behalf.</p>
 <p>Let&rsquo;s say sending an email, when we first started using AI, it&rsquo;s just the chatGPT webiste that helped me write, I&rsquo;d still need to copy the output and send the email myself in Gmail.</p>
 <p>Now we&rsquo;ve got a Gmail MCP, which contains all the tools, including the script to call the Gmail&rsquo;s SendMail API. The model only needs to generate the text, then delegate the job to the MCP server, and an email is sent.</p>
@@ -1874,6 +1874,13 @@ def send_monthly_sales_report(date):
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://markogoodman.github.io/posts/rag/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Retrieval-Augmented Generation</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
