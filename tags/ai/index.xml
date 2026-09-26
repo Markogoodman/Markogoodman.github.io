@@ -14,13 +14,45 @@
     <managingEditor>marko958m@gmail.com (Marko Peng)</managingEditor>
     <webMaster>marko958m@gmail.com (Marko Peng)</webMaster>
     <copyright>©{2020}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 26 Apr 2026 18:24:54 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 15:21:12 -0400</lastBuildDate>
     
         <atom:link href="https://markogoodman.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>HNSW</title>
+        <link>https://markogoodman.github.io/posts/hnsw/</link>
+        <pubDate>Sat, 26 Sep 2026 15:21:12 -0400</pubDate>
+        <author>marko958m@gmail.com (Marko Peng)</author>
+        <atom:modified>Sat, 26 Sep 2026 15:21:12 -0400</atom:modified>
+        <guid>https://markogoodman.github.io/posts/hnsw/</guid>
+        <description>Hierarchical Navigable small world Was looking at some stuff about how postgresql stores vectors, and found that pgvector indexing supports HNSW and IVF, so I spent some time digging into them.
+Navigable small world What is NSW? it&amp;rsquo;s just a graph containing nodes(vectors) and each node is connected to K nodes that are closest to itself. The purpose is to make vector similarity search efficient.
+To do a query (finding the top k closest nodes):</description>
+        
+        <dc:creator>Marko Peng</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ai</category>
+            
+          
+        
+        
+          
+            
+              <category>Computer Science</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Retrieval-Augmented Generation</title>
