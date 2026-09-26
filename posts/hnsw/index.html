@@ -1591,9 +1591,9 @@ Top levels: higher levels contain less nodes, and each level definitely contains
 <li>At ground level just do the usual Navigable small world query</li>
 </ol>
 <p>Hierarchy&rsquo;s sole purpose is to find the entry node for the gound level&rsquo;s NSW search.</p>
-<p>Time Complexity: $O(\log N)$<br />
+<p>Time Complexity: O(log N)<br />
 Why: similar to a Skip-List. Higher levels can help you reach to the dest sooner.<br />
-Space Complexity: $O(efSearch+K)$, efSearch is the size of the priority queues</p>
+Space Complexity: O(efSearch+K), efSearch is the size of the priority queues</p>
 <h2 id="how-to-build-the-graph">How to build the graph</h2>
 <p>Insert vectors one by one<br />
 For each new vector:</p>
@@ -1604,11 +1604,11 @@ For each new vector:</p>
 <li>Trim the edges if some nodes have too many edges</li>
 <li>drop then repeat 3 and 4 to the ground floor</li>
 </ol>
-<p>Insertion / Index Build Time Complexity for N nodes: $O(N \log N)$</p>
-<p>Why: Inserting a vector requires running a search at each level it lives on ($O(\log N)$ search steps) plus connecting to K neighbors K operations. K is a predefined constant, so the operation is O(1).<br />
+<p>Insertion / Index Build Time Complexity for N nodes: O(N logN)</p>
+<p>Why: Inserting a vector requires running a search at each level it lives on (O(\log N) search steps) plus connecting to K neighbors K operations. K is a predefined constant, so the operation is O(1).<br />
 The number of levels is also constant.</p>
 <p>Space Complexity during Build:<br />
-$O(efConstruction+K)$, also the size of the queue</p>
+O(efConstruction+K), also the size of the queue</p>
 <h2 id="summary">Summary</h2>
 <p>I&rsquo;ll do IVF in the next article ha</p>
 
